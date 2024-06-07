@@ -9,11 +9,15 @@ womensFlyout.classList.add('hidden');
 mensButton.addEventListener('click', () => {
     mensFlyout.classList.remove('hidden');
     womensFlyout.classList.add('hidden');
+    mensFlyout.classList.add('active');
+    womensFlyout.classList.remove('active');
 });
 
 womensButton.addEventListener('click', () => {
     womensFlyout.classList.remove('hidden');
     mensFlyout.classList.add('hidden');
+    womensFlyout.classList.add('active');
+    mensFlyout.classList.remove('active');
 });
 
 const countDisplay = document.getElementById('countDisplay');
@@ -45,3 +49,13 @@ const countDisplay = document.getElementById('countDisplay');
     cartItems++;
     cartItemCount.innerText = cartItems;
   });
+
+  // Get the button and shopping cart elements
+const addToCartButton = document.getElementById('addToCartButton');
+const shoppingCart = document.getElementById('shoppingCart');
+
+addToCartButton.addEventListener('click', function() {
+    // Add the classes to the shopping cart element to show the cart
+    shoppingCart.classList.remove('translate-x-full', 'ease-in');
+    shoppingCart.classList.add('translate-x-0', 'ease-out');
+});

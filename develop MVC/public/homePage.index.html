@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <link rel="stylesheet" href="./homepage.styles.css">
 </head>
 
 <body>
@@ -93,57 +93,44 @@
             <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Create account</a>
           </div>
         </div>
-
-        <div class="border-t border-gray-200 px-4 py-6">
-          <a href="#" class="-m-2 flex items-center p-2">
-            <img src="https://tailwindui.com/img/flags/flag-canada.svg" alt="" class="block h-auto w-5 flex-shrink-0">
-            <span class="ml-3 block text-base font-medium text-gray-900">CAD</span>
-            <span class="sr-only">, change currency</span>
-          </a>
-        </div>
       </div>
     </div>
   </div>
+  <nav aria-label="Top" class="mx-auto max-w-7xl  sm:px-6 ">
+    <div class="border-b border-gray-200">
+      <div class="flex h-16 items-center">
+        <!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
+        <button type="button" class="relative rounded-md bg-white p-2 text-gray-400 lg:hidden">
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
 
-  <header class="relative bg-white">
-    <p class="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-      Dream Threads</p>
+        <!-- Logo -->
+        <div class="ml-4 flex lg:ml-0">
+          <a href="#">
+            <span class="sr-only">Dream Threads</span>
+            <img class="h-8 w-auto"
+              src="https://cdn.discordapp.com/attachments/928727986549690429/1248474367411884042/dreamthreadslogo.png?ex=6663cbdc&is=66627a5c&hm=c2c68721ebb13cb311d95ae0e6a9a61276ba877fae492dc59fdb7b05843fbf8e&"
+              alt="">
+          </a>
+        </div>
 
-    <nav aria-label="Top" class="mx-auto max-w-7xl  sm:px-6 ">
-      <div class="border-b border-gray-200">
-        <div class="flex h-16 items-center">
-          <!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
-          <button type="button" class="relative rounded-md bg-white p-2 text-gray-400 lg:hidden">
-            <span class="absolute -inset-0.5"></span>
-            <span class="sr-only">Open menu</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-              aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          </button>
+        <!-- Flyout menus -->
+        <div class="hidden lg:ml-8 lg:block lg:self-stretch">
+          <div class="flex h-full space-x-8">
+            <div class="flex">
+              <div class="relative flex">
+                <!-- Item active: "border-indigo-600 text-indigo-600", Item inactive: "border-transparent text-gray-700 hover:text-gray-800" -->
+                <button id="mensButton" type="button"
+                  class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out"
+                  aria-expanded="false">Men's</button>
+              </div>
 
-          <!-- Logo -->
-          <div class="ml-4 flex lg:ml-0">
-            <a href="#">
-              <span class="sr-only">Dream Threads</span>
-              <img class="h-8 w-auto"
-                src="https://cdn.discordapp.com/attachments/928727986549690429/1248474367411884042/dreamthreadslogo.png?ex=6663cbdc&is=66627a5c&hm=c2c68721ebb13cb311d95ae0e6a9a61276ba877fae492dc59fdb7b05843fbf8e&"
-                alt="">
-            </a>
-          </div>
-
-          <!-- Flyout menus -->
-          <div class="hidden lg:ml-8 lg:block lg:self-stretch">
-            <div class="flex h-full space-x-8">
-              <div class="flex">
-                <div class="relative flex">
-                  <!-- Item active: "border-indigo-600 text-indigo-600", Item inactive: "border-transparent text-gray-700 hover:text-gray-800" -->
-                  <button id="mensButton" type="button"
-                    class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out"
-                    aria-expanded="false">Men's</button>
-                </div>
-
-                <!--
+              <!--
                     'Women' flyout menu, show/hide based on flyout menu state.
   
                     Entering: "transition ease-out duration-200"
@@ -153,26 +140,26 @@
                       From: "opacity-100"
                       To: "opacity-0"
                   -->
-                <div class="absolute inset-x-0 top-full text-sm text-gray-500">
-                  <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
-                  <div class="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true"></div>
+              <div class="absolute inset-x-0 top-full text-sm text-gray-500">
+                <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
+                <div class="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true"></div>
 
-                  <div class="relative bg-white">
-                    <div class="mx-auto max-w-7xl px-8">
+                <div class="relative bg-white">
+                  <div class="mx-auto max-w-7xl px-8">
 
-                    </div>
                   </div>
                 </div>
               </div>
-              <div class="flex">
-                <div class="relative flex">
-                  <!-- Item active: "border-indigo-600 text-indigo-600", Item inactive: "border-transparent text-gray-700 hover:text-gray-800" -->
-                  <button id="womensButton" type="button"
-                    class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out"
-                    aria-expanded="false">Women's</button>
-                </div>
+            </div>
+            <div class="flex">
+              <div class="relative flex">
+                <!-- Item active: "border-indigo-600 text-indigo-600", Item inactive: "border-transparent text-gray-700 hover:text-gray-800" -->
+                <button id="womensButton" type="button"
+                  class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out"
+                  aria-expanded="false">Women's</button>
+              </div>
 
-                <!--
+              <!--
                     'Men' flyout menu, show/hide based on flyout menu state.
   
                     Entering: "transition ease-out duration-200"
@@ -182,173 +169,150 @@
                       From: "opacity-100"
                       To: "opacity-0"
                   -->
-                <div class="absolute inset-x-0 top-full text-sm text-gray-500">
-                  <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
-                  <div class="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true"></div>
+              <div class="absolute inset-x-0 top-full text-sm text-gray-500">
+                <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
+                <div class="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true"></div>
 
-                  <div class="relative bg-white">
-                    <div class="mx-auto max-w-7xl px-8">
-                    </div>
+                <div class="relative bg-white">
+                  <div class="mx-auto max-w-7xl px-8">
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="ml-auto flex items-center">
-            <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-              <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">Sign in</a>
-              <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
-              <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">Create account</a>
-            </div>
-
-            <!-- Search -->
-            <div class="flex lg:ml-6">
-              <a href="#" class="p-2 text-gray-400 hover:text-gray-500">
-                <span class="sr-only">Search</span>
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                  aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                </svg>
-              </a>
-            </div>
-            <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-
-            <!-- Cart -->
-
-            <div class="ml-4 flow-root lg:ml-6">
-              <button @click="cartOpen = !cartOpen" class="group -m-2 flex items-center p-2">
-                <svg class="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500" fill="none"
-                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                </svg>
-                <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
-                <span class="sr-only">items in cart, view bag</span>
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
-    </nav>
 
-
-    <!-- tailwind.config.js -->
-    <!-- module.exports = {}; -->
-
-
-
-    <!-- component -->
-
-    <!-- Cart Here?-->
-    <div x-data="{ cartOpen: false , isOpen: false }" class="bg-white">
-      <header>
-
-        <div class="container mx-auto px-6 py-3">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center justify-end w-full">
-              <!-- Cart button here!-->
-              <button @click="cartOpen = !cartOpen" class="text-gray-600 focus:outline-none mx-4 sm:mx-0">
-                <svg class="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500" fill="none"
-                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                </svg>
-                <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
-                <span class="sr-only">items in cart, view bag</span>
-              </button>
-
-              <div class="flex sm:hidden">
-                <button @click="isOpen = !isOpen" type="button"
-                  class="text-gray-600 hover:text-gray-500 focus:outline-none focus:text-gray-500"
-                  aria-label="toggle menu">
-                  <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
-                    <path fill-rule="evenodd"
-                      d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
-                    </path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+        <div class="ml-auto flex items-center">
+          <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+            <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">Sign in</a>
+            <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
+            <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">Create account</a>
           </div>
-          <div class="relative mt-6 max-w-lg mx-auto">
-            <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
-              <svg class="h-5 w-5 text-gray-500" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+          <!-- Cart -->
+
+          <div class="ml-4 flow-root lg:ml-6">
+            <button id="addToCartButton" @click="cartOpen = !cartOpen" class="group -m-2 flex items-center p-2">
+              <svg class="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
               </svg>
-            </span>
+              <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
+              <span class="sr-only">items in cart, view bag</span>
+            </button>
 
-            <input
-              class="w-full border rounded-md pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:shadow-outline"
-              type="text" placeholder="Search">
           </div>
         </div>
-      </header>
-      <div :class="cartOpen ? 'translate-x-0 ease-out' : 'translate-x-full ease-in'"
-        class="fixed right-0 top-0 max-w-xs w-full h-full px-6 py-4 transition duration-300 transform overflow-y-auto bg-white border-l-2 border-gray-300">
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- tailwind.config.js -->
+  <!-- module.exports = {}; -->
+
+
+
+  <!-- component -->
+
+  <!-- Cart Here?-->
+  <div x-data="{ cartOpen: false , isOpen: false }" class="bg-white">
+    <header>
+
+      <div class="container mx-auto px-6 py-3">
         <div class="flex items-center justify-between">
-          <h3 class="text-2xl font-medium text-gray-700">Your cart</h3>
-          <button @click="cartOpen = !cartOpen" class="text-gray-600 focus:outline-none">
-            <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-        <hr class="my-3">
-        <div class="flex justify-between mt-6">
-          <div class="flex">
-            <img class="h-20 w-20 object-cover rounded"
-              src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80"
-              alt="">
-            <div class="mx-3">
-              <h3 class="text-sm text-gray-600">Mac Book Pro</h3>
-              <div class="flex items-center mt-2">
-                <button class="increment-button text-gray-500 focus:outline-none focus:text-gray-600">
-                  <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </button>
-                <span id="countDisplay" class="text-gray-700 mx-2">2</span>
-                <button class="decrement-button text-gray-500 focus:outline-none focus:text-gray-600">
-                  <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </button>
-              </div>
+          <div class="flex items-center justify-end w-full">
+            <!-- Cart button here!-->
+            <!-- <button @click="cartOpen = !cartOpen" class="text-gray-600 focus:outline-none mx-4 sm:mx-0">
+                <svg class="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500" fill="none"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+                <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
+                <span class="sr-only">items in cart, view bag</span>
+              </button> -->
+
+            <div class="flex sm:hidden">
+              <button @click="isOpen = !isOpen" type="button"
+                class="text-gray-600 hover:text-gray-500 focus:outline-none focus:text-gray-500"
+                aria-label="toggle menu">
+                <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                  <path fill-rule="evenodd"
+                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+                  </path>
+                </svg>
+              </button>
             </div>
           </div>
-          <span class="text-gray-600">20$</span>
         </div>
-        <a
-          class="flex items-center justify-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
-          <span>Checkout</span>
-          <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
-        </a>
       </div>
-  </header>
+    </header>
+    <div id="shoppingCart" :class="cartOpen ? 'translate-x-0 ease-out' : 'translate-x-full ease-in'"
+      class="fixed right-0 top-0 max-w-xs w-full h-full px-6 py-4 transition duration-300 transform overflow-y-auto bg-white border-l-2 border-gray-300">
+      <div class="flex items-center justify-between">
+        <h3 class="text-2xl font-medium text-gray-700">Your cart</h3>
+        <button @click="cartOpen = !cartOpen" class="text-gray-600 focus:outline-none">
+          <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <hr class="my-3">
+      <div class="flex justify-between mt-6">
+        <div class="flex">
+          <img class="h-20 w-20 object-cover rounded"
+            src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80"
+            alt="">
+          <div class="mx-3">
+            <h3 class="text-sm text-gray-600">Mac Book Pro</h3>
+            <div class="flex items-center mt-2">
+              <button class="increment-button text-gray-500 focus:outline-none focus:text-gray-600">
+                <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </button>
+              <span id="countDisplay" class="text-gray-700 mx-2">2</span>
+              <button class="decrement-button text-gray-500 focus:outline-none focus:text-gray-600">
+                <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <span class="text-gray-600">20$</span>
+      </div>
+      <a
+        class="flex items-center justify-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+        <span>Checkout</span>
+        <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+    </header>
   </div>
 
 </body>
 
 </html>
 <!--Mens Flyout-->
-<main id="mensFlyout" class="my-8">
+<main id="mensFlyout" class="my-8 flyout-menu">
   <div class="container mx-auto px-6">
     <div class="h-64 rounded-md overflow-hidden bg-cover bg-center"
       style="background-image: url('https://images.unsplash.com/photo-1577655197620-704858b270ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1280&q=144')">
       <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
         <div class="px-10 max-w-xl">
           <h2 class="text-2xl text-white font-semibold">Apparel</h2>
-          <p class="mt-2 text-gray-400">"Explore our wholesale men's apparel section, offering a diverse range of stylish and versatile clothing options. 
+          <p class="mt-2 text-gray-400">"Explore our wholesale men's apparel section, offering a diverse range of
+            stylish and versatile clothing options.
             From classic shirts to trendy outerwear, find the perfect pieces to elevate any wardrobe."</p>
           <button
             class="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
@@ -367,8 +331,9 @@
         <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
           <div class="px-10 max-w-xl">
             <h2 class="text-2xl text-white font-semibold">Accessories</h2>
-            <p class="mt-2 text-gray-400">"Discover our wholesale accessories for men, featuring a curated selection of stylish and functional items.
-               From sleek watches to dashing cologne, find the perfect finishing touches to complement any look."</p>
+            <p class="mt-2 text-gray-400">"Discover our wholesale accessories for men, featuring a curated selection of
+              stylish and functional items.
+              From sleek watches to dashing cologne, find the perfect finishing touches to complement any look."</p>
             <button
               class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
               <span>Shop Now</span>
@@ -385,8 +350,9 @@
         <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
           <div class="px-10 max-w-xl">
             <h2 class="text-2xl text-white font-semibold">Glasses</h2>
-            <p class="mt-2 text-gray-400">"Browse our wholesale glasses category for a diverse range of stylish eyewear. 
-              With options ranging from classic to contemporary, find the perfect frames to suit any customer's style."</p>
+            <p class="mt-2 text-gray-400">"Browse our wholesale glasses category for a diverse range of stylish eyewear.
+              With options ranging from classic to contemporary, find the perfect frames to suit any customer's style."
+            </p>
             <button
               class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
               <span>Shop Now</span>
@@ -450,7 +416,7 @@
         <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
           <a href="#">
             <img class="hover:grow hover:shadow-lg "
-              src="https://images.unsplash.com/photo-1618215650148-e8e61eae521c?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+              src="https://images.unsplash.com/photo-1517463700628-5103184eac47?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdhdGNofGVufDB8fDB8fHww">
             <div class="pt-3 flex items-center justify-between">
               <p class="">JAEGER-LECOULTRE</p>
               <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg"
@@ -507,7 +473,7 @@
                 </div>
                 <p class="pt-1 text-gray-900">$19.99</p>
               </a>
-              
+
             </div>
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
@@ -560,14 +526,15 @@
           </div>
 </main>
 <!--Women's Flyout-->
-<main id="womensFlyout" class="my-8">
+<main id="womensFlyout" class="my-8 flyout-menu">
   <div class="container mx-auto px-6">
     <div class="h-64 rounded-md overflow-hidden bg-cover bg-center"
       style="background-image: url('https://media.istockphoto.com/id/1297390121/photo/fashion-store.jpg?s=612x612&w=0&k=20&c=Lgk8nLtwaLHlJdDCDhu61imEP3CurRdODyAprMjYdqw=')">
       <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
         <div class="px-10 max-w-xl">
           <h2 class="text-2xl text-white font-semibold">Apparel</h2>
-          <p class="mt-2 text-gray-400">"Browse our wholesale women's apparel section for a curated collection of fashionable and versatile clothing. 
+          <p class="mt-2 text-gray-400">"Browse our wholesale women's apparel section for a curated collection of
+            fashionable and versatile clothing.
             From elegant dresses to casual tops, discover the perfect pieces to elevate any wardrobe."</p>
           <button
             class="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
@@ -586,7 +553,8 @@
         <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
           <div class="px-10 max-w-xl">
             <h2 class="text-2xl text-white font-semibold">Accessories</h2>
-            <p class="mt-2 text-gray-400">"Discover our wholesale women's accessories, featuring a curated selection of stylish and versatile pieces. 
+            <p class="mt-2 text-gray-400">"Discover our wholesale women's accessories, featuring a curated selection of
+              stylish and versatile pieces.
               From chic handbags to elegant add-ons, find the perfect finishing touches to elevate any outfit."</p>
             <button
               class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
@@ -604,8 +572,10 @@
         <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
           <div class="px-10 max-w-xl">
             <h2 class="text-2xl text-white font-semibold">Jewelry</h2>
-            <p class="mt-2 text-gray-400">"Explore our wholesale women's jewelry collection, meticulously curated with stylish and elegant pieces.
-               From delicate necklaces to statement earrings, find the perfect accessories to add a touch of glamour to any ensemble."</p>
+            <p class="mt-2 text-gray-400">"Explore our wholesale women's jewelry collection, meticulously curated with
+              stylish and elegant pieces.
+              From delicate necklaces to statement earrings, find the perfect accessories to add a touch of glamour to
+              any ensemble."</p>
             <button
               class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
               <span>Shop Now</span>
@@ -671,7 +641,7 @@
         <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
           <a href="#">
             <img class="hover:grow hover:shadow-lg "
-              src="https://images.pexels.com/photos/715822/pexels-photo-715822.jpeg?auto=compress&cs=tinysrgb&w=600">
+              src="https://images.pexels.com/photos/814662/pexels-photo-814662.jpeg?auto=compress&cs=tinysrgb&w=600">
             <div class="pt-3 flex items-center justify-between">
               <p class="">CELINE</p>
               <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg"
@@ -687,7 +657,7 @@
         <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
           <a href="#">
             <img class="hover:grow hover:shadow-lg"
-              src="https://images.pexels.com/photos/3220889/pexels-photo-3220889.jpeg?auto=compress&cs=tinysrgb&w=600">
+              src="https://images.pexels.com/photos/37826/nature-hand-natural-people-37826.jpeg?auto=compress&cs=tinysrgb&w=600">
             <div class="pt-3 flex items-center justify-between">
               <p class="">PURE VIDA</p>
               <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg"
@@ -718,7 +688,7 @@
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
               <a href="#">
                 <img class="hover:grow hover:shadow-lg"
-                  src="https://images.pexels.com/photos/932577/pexels-photo-932577.jpeg?auto=compress&cs=tinysrgb&w=600">
+                  src="https://images.pexels.com/photos/9944432/pexels-photo-9944432.jpeg?auto=compress&cs=tinysrgb&w=600">
                 <div class="pt-3 flex items-center justify-between">
                   <p class="">ARMANI</p>
                   <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg"
@@ -734,7 +704,7 @@
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
               <a href="#">
                 <img class="hover:grow hover:shadow-lg"
-                  src="https://images.pexels.com/photos/1961792/pexels-photo-1961792.jpeg?auto=compress&cs=tinysrgb&w=600">
+                  src="https://images.pexels.com/photos/4736017/pexels-photo-4736017.jpeg?auto=compress&cs=tinysrgb&w=600">
                 <div class="pt-3 flex items-center justify-between">
                   <p class="">CALVIN KLEIN</p>
                   <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg"
@@ -871,39 +841,19 @@
             </p>
           </div>
         </div>
-        <div class="flex w-full lg:justify-end lg:text-right mt-6 md:mt-0">
+        <div class="flex w-full lg:justify-center lg:text-right mt-6 md:mt-0">
           <div class="px-3 md:px-0">
-            <h3 class="text-left font-bold text-gray-900">Social</h3>
+            <h3 class="text-center font-bold text-gray-900">Social</h3>
 
             <div class="w-full flex items-center py-4 mt-0">
-              <a href="#" class="mx-2">
-                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+
+              <a href="https://github.com/fairybones/Project2-full-stack" class="mx-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path
-                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z">
-                  </path>
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                 </svg>
               </a>
-              <a href="#" class="mx-2">
-                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                  <path
-                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
-                  </path>
-                </svg>
-              </a>
-              <a href="#" class="mx-2">
-                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                  <path
-                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z">
-                  </path>
-                </svg>
-              </a>
-              <a href="#" class="mx-2">
-                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                  <path
-                    d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z">
-                  </path>
-                </svg>
-              </a>
+
             </div>
           </div>
         </div>
