@@ -51,11 +51,21 @@ const countDisplay = document.getElementById('countDisplay');
   });
 
   // Get the button and shopping cart elements
-const addToCartButton = document.getElementById('addToCartButton');
-const shoppingCart = document.getElementById('shoppingCart');
-
-addToCartButton.addEventListener('click', function() {
-    // Add the classes to the shopping cart element to show the cart
-    shoppingCart.classList.remove('translate-x-full', 'ease-in');
-    shoppingCart.classList.add('translate-x-0', 'ease-out');
-});
+  const addToCartButton = document.getElementById('addToCartButton');
+  const shoppingCart = document.getElementById('shoppingCart');
+  
+  // Initially hide the shopping cart
+  shoppingCart.classList.add('translate-x-full', 'ease-in');
+  
+  addToCartButton.addEventListener('click', function() {
+      // Toggle the visibility of the shopping cart when the button is clicked
+      shoppingCart.classList.toggle('translate-x-full');
+      shoppingCart.classList.toggle('translate-x-0');
+  });
+  
+  const cartCloser = document.getElementById("cartCloser");
+  
+  cartCloser.addEventListener('click', function() {
+      shoppingCart.classList.add('translate-x-full', 'ease-in');
+  });
+  
