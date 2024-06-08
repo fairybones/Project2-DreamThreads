@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./homepage.styles.css">
 </head>
 
 <body>
+  <!-- Code for login use this later!-->
+
   <!-- Background here once we get it working!-->
   <!-- <div class="absolute inset-0 -z-10 h-full w-full bg cover bg repeat bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"> -->
   <!--
@@ -85,14 +86,6 @@
             </div>
           </div>
         </div>
-        <div class="space-y-6 border-t border-gray-200 px-4 py-6">
-          <div class="flow-root">
-            <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Sign in</a>
-          </div>
-          <div class="flow-root">
-            <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Create account</a>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -110,14 +103,14 @@
         </button>
 
         <!-- Logo -->
-        <div class="ml-4 flex lg:ml-0">
+        <!-- <div class="ml-4 flex lg:ml-0">
           <a href="#">
             <span class="sr-only">Dream Threads</span>
             <img class="h-8 w-auto"
               src="https://cdn.discordapp.com/attachments/928727986549690429/1248474367411884042/dreamthreadslogo.png?ex=6663cbdc&is=66627a5c&hm=c2c68721ebb13cb311d95ae0e6a9a61276ba877fae492dc59fdb7b05843fbf8e&"
               alt="">
           </a>
-        </div>
+        </div> -->
 
         <!-- Flyout menus -->
         <div class="hidden lg:ml-8 lg:block lg:self-stretch">
@@ -184,9 +177,9 @@
 
         <div class="ml-auto flex items-center">
           <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-            <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">Sign in</a>
+            <a href="./signIn.index.html" class="text-sm font-medium text-gray-700 hover:text-gray-800">Sign in</a>
             <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
-            <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">Create account</a>
+            <a href="./createAccount.index.html" class="text-sm font-medium text-gray-700 hover:text-gray-800">Create account</a>
           </div>
           <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
@@ -224,17 +217,6 @@
       <div class="container mx-auto px-6 py-3">
         <div class="flex items-center justify-between">
           <div class="flex items-center justify-end w-full">
-            <!-- Cart button here!-->
-            <!-- <button @click="cartOpen = !cartOpen" class="text-gray-600 focus:outline-none mx-4 sm:mx-0">
-                <svg class="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500" fill="none"
-                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                </svg>
-                <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
-                <span class="sr-only">items in cart, view bag</span>
-              </button> -->
-
             <div class="flex sm:hidden">
               <button @click="isOpen = !isOpen" type="button"
                 class="text-gray-600 hover:text-gray-500 focus:outline-none focus:text-gray-500"
