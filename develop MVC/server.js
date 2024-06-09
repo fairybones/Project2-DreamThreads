@@ -28,7 +28,10 @@ const sess = {
 
 app.use(session(sess));
 
+// Parse incoming request bodies with JSON payloads
 app.use(express.json());
+
+// Parse incoming request bodies with URL-encoded payloads
 app.use(express.urlencoded({ extended: true }));
 
 // Add route handlers for GET and POST requests to /api/create-account
@@ -39,6 +42,24 @@ app.get('/api/create-account', (req, res) => {
 app.post('/api/create-account', (req, res) => {
     // Handle account creation logic here
     res.status(200).json({ message: 'POST request to /api/create-account' });
+});
+
+// Route for user login
+app.post('/api/login', (req, res) => {
+  const { email, password } = req.body;
+
+  // Authentication logic
+  // Check if email and password are provided
+  if (!email || !password) {
+    return res.status(400).json({ message: 'Email and password are required' });
+  }
+
+  // Verify user's credentials
+  if (email === 'user@example.com' && password === 'password') {
+    res.status(200).json({ message: 'User logged in successfully' });
+  } else {
+    res.status(401).json({ message: 'Invalid email or password' });
+  }
 });
 
 app.use(routes);
