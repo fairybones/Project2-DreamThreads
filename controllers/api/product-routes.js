@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Product } = require('../../backend/models/product'); // Import the Product model
+// const { Product } = require('../../backend/models/product'); // Import the Product model
 
 // Get all products
 router.get('/', async (req, res) => {
