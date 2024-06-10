@@ -70,6 +70,12 @@ app.use('/bracelets', braceletsRoutes);
 const perfumeRoutes = require('./controllers/api/perfume');
 app.use('/perfume', perfumeRoutes);
 
+const newRoutes = require('./controllers/api/new');
+app.use('/new', newRoutes);
+
+const teesRoutes = require('./controllers/api/tees');
+app.use('/tees', teesRoutes);
+
 
 // Add route handlers for GET and POST requests to /api/create-account
 app.get('/api/create-account', (req, res) => {
