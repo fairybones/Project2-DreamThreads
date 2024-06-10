@@ -5,11 +5,7 @@ const sequelize = require("../config/connection");
 class Product extends Model {}
 
 // products in Collections:
-// Tops = tees, longsleeves, hoodies (custom option)
-// Bottoms = shorts, pants (sweatpants style, customizable) 
-// Hats = cap, bucket 
-// Bags = tote, side 
-// Fans = color/design options
+// Apparel, watches, jewelry, cologne, perfume, glasses, shoes
 
 Product.init(
   {
@@ -32,9 +28,18 @@ Product.init(
       type: DataTypes.DECIMAL,
       allowNull: false,
     },
-    quantity: {
+    color: {
       type: DataTypes.STRING,
       allowNull: true,
+    },
+    stock: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: "100",
+    },
+    quantity: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     collection_id: {
       type: DataTypes.INTEGER,

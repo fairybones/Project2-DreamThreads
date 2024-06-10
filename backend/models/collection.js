@@ -2,7 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class Collection extends Model {}
-// collections: tops, bottoms, hats, bags, fans
+// collections: apparel, watches, jewelry, cologne, perfume, glasses, shoes
 
 Collection.init(
   {
