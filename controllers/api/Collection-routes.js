@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Collection } = require('../../backend/models/collection');
+// const { Collection } = require('../../backend/models/collection');
 
 // The `/api/collection` endpoint
 // find all collection

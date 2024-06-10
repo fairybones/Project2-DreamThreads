@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     try {
-      const response = await fetch('http://localhost:3001/api/create-account', {
+      const response = await fetch('http://localhost:3001/api/users/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -19,21 +19,25 @@ document.addEventListener('DOMContentLoaded', function() {
         body: JSON.stringify(userData)
       });
 
-      if (response.ok) {
-        console.log('Account created successfully');
+      if (!response.ok) {
+        console.log('Account not created successfully');
+        return null;
         // Redirect to login page 
         // window.location.href = './login.index.html';
-      } else {
-        console.error('Failed to create account - Status:', response.status);
-        // Show error message to the user based on the response status
-        if (response.status === 0) {
-          console.error('Network error - Check server connection');
-        } else if (response.status === 404) {
-          console.error('Resource not found - Check server endpoint');
-        } else {
-          console.error('Unexpected error occurred');
-        }
-      }
+      } 
+
+      return await response.json()
+      // else {
+      //   console.error('Failed to create account - Status:', response.status);
+      //   // Show error message to the user based on the response status
+      //   if (response.status === 0) {
+      //     console.error('Network error - Check server connection');
+      //   } else if (response.status === 404) {
+      //     console.error('Resource not found - Check server endpoint');
+      //   } else {
+      //     console.error('Unexpected error occurred');
+      //   }
+      // }
     } catch (error) {
       console.error('Error creating account:', error);
       // Handle any other errors that occur during the fetch request
