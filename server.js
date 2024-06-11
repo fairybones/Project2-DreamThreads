@@ -19,7 +19,7 @@ const sess = {
       maxAge: 30 * 24 * 60 * 60 * 1000,
       httpOnly: true,
       secure: false,
-      sameSite: 'strict',
+      //sameSite: 'strict',
     },
     resave: false,
     saveUninitialized: true,
@@ -81,7 +81,7 @@ app.set('view engine', 'handlebars');
 
 
 app.use(routes);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening on port ' + PORT));
