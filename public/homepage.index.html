@@ -341,10 +341,12 @@
               src="https://images.unsplash.com/photo-1602752975366-5520991f958d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
             <div class="pt-3 flex items-center justify-between">
               <p class="">BREMONT </p>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
+              <!--Turning this into a button to work on cart functionality-->
+              <button id="addProduct">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+            </button>
             </div>
             <p class="pt-1 text-gray-900">$99.99</p>
           </a>
@@ -802,3 +804,4 @@
 </div>
 </div>
 <script src="./homepage.script.js"></script>
+<script src="./Cart.js"></script>
