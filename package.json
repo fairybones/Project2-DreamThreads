@@ -1,0 +1,35 @@
+{
+  "name": "project2-full-stack",
+  "version": "1.0.0",
+  "description": "An ecommerce website that supplies fantastical clothing & accessories.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "fairybones"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "sequelize",
+    "handlebars",
+    "postgresql"
+  ],
+  "author": "Annie Schalnat, Caleb Warford, Daniel Fyremen, Maxwell Mitchell",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "handlebars": "^4.7.6",
+    "pg": "^8.11.3",
+    "sequelize": "^6.33.0",
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.0"
+  }
+}
