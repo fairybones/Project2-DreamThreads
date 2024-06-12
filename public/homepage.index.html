@@ -207,7 +207,8 @@
         </div>
       </div>
     </header>
-    <div id="shoppingCart" :class="cartOpen ? 'translate-x-0 ease-out' : 'translate-x-full ease-in'"
+    <div id="" class="mt-6">
+    <div id="cartItemsContainer" :class="cartOpen ? 'translate-x-0 ease-out' : 'translate-x-full ease-in'"
       class="fixed right-0 top-0 max-w-xs w-full h-full px-6 py-4 transition duration-300 transform overflow-y-auto bg-white border-l-2 border-gray-300">
       <div class="flex items-center justify-between">
         <h3 class="text-2xl font-medium text-gray-700">Your cart</h3>
@@ -256,7 +257,7 @@
     </div>
     </header>
   </div>
-
+</div>
 </body>
 
 </html>
@@ -340,11 +341,13 @@
             <img class="hover:grow hover:shadow-lg"
               src="https://images.unsplash.com/photo-1602752975366-5520991f958d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
             <div class="pt-3 flex items-center justify-between">
-              <p class="">BREMONT </p>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
+            <!-- Button 1 -->
+<p class="">BREMONT</p>
+<button class="addProduct" data-name="BREMONT" data-price="99.99" data-image="https://images.unsplash.com/photo-1579171931975-97962e46be2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+    </svg>
+</button>
             </div>
             <p class="pt-1 text-gray-900">$99.99</p>
           </a>
@@ -357,10 +360,11 @@
               src="https://images.unsplash.com/photo-1579171931975-97962e46be2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
             <div class="pt-3 flex items-center justify-between">
               <p class="">BAUME & MERCIER</p>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
+<button class="addProduct" data-name="BAUME & MERCIER" data-price="129.99" data-image="https://images.unsplash.com/photo-12345">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+    </svg>
+</button>
             </div>
             <p class="pt-1 text-gray-900">$129.99</p>
           </a>
@@ -801,4 +805,5 @@
 </footer>
 </div>
 </div>
-<script src="./homepage.script.js"></script>
+<script src="./homepage.js"></script>
+<script src="./Cart.js"></script>
