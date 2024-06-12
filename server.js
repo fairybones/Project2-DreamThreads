@@ -64,7 +64,8 @@ app.use('/new', newRoutes);
 const teesRoutes = require('./controllers/api/tees');
 app.use('/tees', teesRoutes);
 
-
+const loginRoutes = require("./controllers/api/user-routes");
+app.use('/login', loginRoutes);
 
 app.use(session(sess));
 
