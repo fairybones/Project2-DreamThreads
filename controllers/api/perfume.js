@@ -1,55 +1,91 @@
 const express = require('express');
 const router = express.Router();
 
+// fetch women's perfume
+
 router.get('/', (req, res) => {
-    // Sample product data with photo URLs
     const products = [
-        { 
-            image: 'https://images.pexels.com/photos/7691223/pexels-photo-7691223.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 1',
-            price: '$19.99'
+        {
+            product_id: 46,
+            name: 'Fresh Bouquet of Flowers',
+            filename: 'womens-perfume-1.jpeg',
+            price: '69.99',
+            description: 'A sweet scent with floral notes.',
+            colors: 'One Color',
+            sizes: 'One Size',
+            // quantity: ''
         },
-        { 
-            image: 'https://images.pexels.com/photos/7691223/pexels-photo-7691223.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 2',
-            price: '$24.99'
+        {
+            product_id: 47,
+            name: 'Diamond of the Garden',
+            filename: 'womens-perfume-2.jpeg',
+            price: '119.99',
+            description: 'A spicy scent with floral notes.',
+            colors: 'One Color',
+            sizes: 'One Size',
+            // quantity: ''
         },
-        { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 3',
-            price: '$29.99'
+        {
+            product_id: 48,
+            name: 'Princess Perfume',
+            filename: 'womens-perfume-3.jpeg',
+            price: '79.99',
+            description: 'A lightly floral scent with notes of sandalwood.',
+            colors: 'One Color',
+            sizes: 'One Size',
+            // quantity: ''
         },
-        { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 4',
-            price: '$39.99'
+        {
+            product_id: 49,
+            name: 'Starry Perfume',
+            filename: 'womens-perfume-4.jpeg',
+            price: '129.99',
+            description: 'A dreamy scent with notes of vanilla and lavender.',
+            colors: 'One Color',
+            sizes: 'One Size',
+            // quantity: ''
         },
-        { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 5',
-            price: '$49.99'
+        {
+            product_id: 50,
+            name: 'I Like Candy',
+            filename: 'womens-perfume-5.jpeg',
+            price: '119.99',
+            description: 'A sweet, citrusy summer scent.',
+            colors: 'One Color',
+            sizes: 'One Size',
+            // quantity: ''
         },
-        { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 6',
-            price: '$59.99'
-        },
-        { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 7',
-            price: '$69.99'
-        },
-        { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 8',
-            price: '$79.99'
-        }
-    ];
+];
 
-    // HTML content for the section
-    const sectionContent = '<section class="bg-white py-8">  </section>';
 
-    // Render the accessories.handlebars template with the product data and section content
+    let modalsHtml = ''; // Initialize an empty string to store modal HTML
+
+    products.forEach((product) => {
+        // Generate modal HTML for each product
+        const modalHtml = `
+            <div class="modal" id="modal-${product.id}">
+                <img src="${product.image}" alt="${product.name}">
+                <div class="modal-info">
+                    <h2>${product.name}</h2>
+                    <p>Price: ${product.price}</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        `;
+        
+        modalsHtml += modalHtml; // Append modal HTML to the modals container
+    });
+
+    // HTML content for the section with modals
+    const sectionContent = `
+        <section class="bg-white py-8">
+            <div id="modals-container">
+                ${modalsHtml} <!-- Insert generated modals here -->
+            </div>
+        </section>
+    `;
+
+    // Render the perfume.handlebars template with the product data and section content
     res.render('perfume', { sectionContent, products });
 });
 

@@ -1,57 +1,60 @@
 const express = require('express');
 const router = express.Router();
 
+// fetch women's accessories
+
 router.get('/', (req, res) => {
     const products = [
-    {
-        image: 'https://images.pexels.com/photos/7691223/pexels-photo-7691223.jpeg?auto=compress&cs=tinysrgb&w=600',
-        name: 'Product 1',
-        price: '$19.99',
-        id: 'masc1'
-    },
-    { 
-        image: 'https://images.pexels.com/photos/7691223/pexels-photo-7691223.jpeg?auto=compress&cs=tinysrgb&w=600',
-        name: 'Product 2',
-        price: '$24.99',
-        id: 'masc2'
-
-    },
-    { 
-        image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-        name: 'Product 3',
-        price: '$29.99',
-        id: 'masc3'
-    },
-    { 
-        image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-        name: 'Product 4',
-        price: '$39.99',
-        id: 'masc4'
-    },
-    { 
-        image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-        name: 'Product 5',
-        price: '$49.99',
-        id: 'masc5'
-    },
-    { 
-        image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-        name: 'Product 6',
-        price: '$59.99',
-        id: 'masc6'
-    },
-    { 
-        image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-        name: 'Product 7',
-        price: '$69.99',
-        id: 'masc7'
-    },
-    { 
-        image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-        name: 'Product 8',
-        price: '$79.99',
-        id: 'masc8'
-    }
+        {
+            product_id: 41,
+            name: 'Oval Sunglasses',
+            filename: 'womens-accessories-1.jpeg',
+            price: '129.99',
+            description: 'Chunky oval frames in cherry red or classic black.',
+            colors: ['Black', 'Red'],
+            sizes: 'One Size',
+            // quantity: ''
+        },
+        {
+            product_id: 42,
+            name: 'See No BS',
+            filename: 'womens-accessories-2.jpeg',
+            price: '199.99',
+            description: 'Colorful goggles to blind the haters.',
+            colors: 'Multicolor',
+            sizes: 'Adjustable',
+            // quantity: ''
+        },
+        {
+            product_id: 43,
+            name: 'Holographic Gloves',
+            filename: 'womens-accessories-3.jpeg',
+            price: '69.99',
+            description: 'Rainbow reflective gloves that pack a punch!',
+            colors: ['Pink Holo', 'Black Holo'],
+            sizes: 'One Size',
+            // quantity: ''
+        },
+        {
+            product_id: 44,
+            name: 'Fluffy Tinted Glasses',
+            filename: 'womens-accessories-4.jpeg',
+            price: '29.99',
+            description: 'Super soft frames with colored lenses.',
+            colors: ['Pink', 'Blue', 'Purple'],
+            sizes: 'One Size',
+            // quantity: ''
+        },
+        {
+            product_id: 45,
+            name: 'My Heart Bag',
+            filename: 'womens-accessories-5.jpeg',
+            price: '295.99',
+            description: 'Crystallized anatomical heart bag to hold your favorite things.',
+            colors: ['Gold', 'Silver'],
+            sizes: 'One Size',
+            // quantity: ''
+        },
 ];
 
 
