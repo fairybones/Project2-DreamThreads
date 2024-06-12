@@ -1,53 +1,39 @@
 const express = require('express');
 const app = express();
 const router = require('express').Router();
-const collectionRoutes = require('./Collection-routes'); //lowercase
-const productRoutes = require('./product-routes');
-const tagRoutes = require('./tag-routes');
-const userRoutes = require("./user-routes");
+const apiRoutes = require('./api');
 
-router.use('/collection', collectionRoutes);
-router.use('/users', userRoutes);
-router.use('/products', productRoutes);
-router.use('/tags', tagRoutes);
+router.use('/api', apiRoutes);
+// router.use('/', clientRoutes);
 
-// const apparelRoutes = require('./apparel');
-// app.use('/apparel', apparelRoutes);
+const womensApparel = require('./apparel-W.js');
+app.use('/apparel-W', womensApparel);
 
-// const accessoriesRoutes = require('./accessories');
-// app.use('/accessories', accessoriesRoutes);
+const mensApparel = require('./apparel-M.js');
+app.use('/apparel-M', mensApparel);
 
-// const glassesRoutes = require('./glasses');
-// app.use('/glasses', glassesRoutes);
+const womensAccessories = require('./accessories.js');
+app.use('/accessories', womensAccessories);
 
-// const watchesRoutes = require('./watches');
-// app.use('/watches', watchesRoutes);
+const mensWatches = require('./watches.js');
+app.use('/watches', mensWatches);
 
-// const cologneRoutes = require('./cologne');
-// app.use('/cologne', cologneRoutes);
+const womensPerfume = require('./perfume.js');
+app.use('/perfume', womensPerfume);
 
-// const apparel2Routes = require('./apparel2');
-// app.use('/apparel2', apparel2Routes);
+const mensCologne = require('./cologne.js');
+app.use('/cologne', mensCologne);
 
-// const accessories2Routes = require('./accessories2');
-// app.use('/accessories2', accessories2Routes);
+const womensJewelry = require('./jewelry.js');
+app.use('/jewelry', womensJewelry);
 
-// const jewelryRoutes = require('./jewelry');
-// app.use('/jewelry', jewelryRoutes);
+const mensGlasses = require('./glasses.js');
+app.use('/glasses', mensGlasses);
 
-// const braceletsRoutes = require('./bracelets');
-// app.use('/bracelets', braceletsRoutes);
+const womensShoes = require('./shoes-W.js');
+app.use('/shoes-W', womensShoes);
 
-// const perfumeRoutes = require('./perfume');
-// app.use('/perfume', perfumeRoutes);
-
-// const newRoutes = require('./new');
-// app.use('/new', newRoutes);
-
-// const teesRoutes = require('./tees');
-// app.use('/tees', teesRoutes);
-
-
-
+const mensShoes = require('./shoes-M.js');
+app.use('/shoes-M', mensShoes);
 
 module.exports = router;

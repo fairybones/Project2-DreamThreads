@@ -1,55 +1,100 @@
 const express = require('express');
 const router = express.Router();
 
+// fetch men's sunnies
+
 router.get('/', (req, res) => {
-    // Sample product data with photo URLs
     const products = [
-        { 
-            image: 'https://images.pexels.com/photos/7691223/pexels-photo-7691223.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 1',
-            price: '$19.99'
+        {
+            product_id: 15,
+            name: 'Dior Cologne',
+            filename: 'mens-cologne-5.jpeg',
+            price: '179.99',
+            description: 'A calm scent with floral notes.',
+            colors: 'One Color',
+            sizes: ['Travel', 'Small', 'Large'],
+            // quantity: ''
         },
-        { 
-            image: 'https://images.pexels.com/photos/7691223/pexels-photo-7691223.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 2',
-            price: '$24.99'
+        {
+            product_id: 16,
+            name: 'Golden Sunglasses',
+            filename: 'mens-glasses-1.jpeg',
+            price: '129.99',
+            description: 'Sunglasses with gold chrome.',
+            colors: 'One Color',
+            sizes: 'One Size',
+            // quantity: ''
         },
-        { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 3',
-            price: '$29.99'
+        {
+            product_id: 17,
+            name: '3D Sunglasses',
+            filename: 'mens-glasses-2.jpeg',
+            price: '189.99',
+            description: 'Futuristic sunglasses that mimic 3D movie glasses.',
+            colors: 'One Color',
+            sizes: 'One Size',
+            // quantity: ''
         },
-        { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 4',
-            price: '$39.99'
+        {
+            product_id: 18,
+            name: 'Tinted Sunglasses (Brown)',
+            filename: 'mens-glasses-3.jpeg',
+            price: '29.99',
+            description: 'Sunglasses with brown frames & colored lenses.',
+            colors: ['Blue', 'Yellow', 'Pink'],
+            sizes: 'One Size',
+            // quantity: ''
         },
-        { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 5',
-            price: '$49.99'
+        {
+            product_id: 19,
+            name: 'Tinted Sunglasses (Black)',
+            filename: 'mens-glasses-4.jpeg',
+            price: '29.99',
+            description: 'Sunglasses with black frames & colored lenses.',
+            colors: ['Purple', 'Red', 'Blue'],
+            sizes: 'One Size',
+            // quantity: ''
         },
-        { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 6',
-            price: '$59.99'
+        {
+            product_id: 20,
+            name: 'Polarized Sunglasses',
+            filename: 'mens-glasses-5.jpeg',
+            price: '89.99',
+            description: 'Polarized sunglasses with tinted lenses.',
+            colors: 'One Color',
+            sizes: 'One Size',
+            // quantity: ''
         },
-        { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 7',
-            price: '$69.99'
-        },
-        { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 8',
-            price: '$79.99'
-        }
-    ];
+];
 
-    // HTML content for the section
-    const sectionContent = '<section class="bg-white py-8">  </section>';
+    let modalsHtml = ''; // Initialize an empty string to store modal HTML
 
-    // Render the accessories.handlebars template with the product data and section content
+    products.forEach((product) => {
+        // Generate modal HTML for each product
+        const modalHtml = `
+            <div class="modal" id="modal-${product.id}">
+                <img src="${product.image}" alt="${product.name}">
+                <div class="modal-info">
+                    <h2>${product.name}</h2>
+                    <p>Price: ${product.price}</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        `;
+        
+        modalsHtml += modalHtml; // Append modal HTML to the modals container
+    });
+
+    // HTML content for the section with modals
+    const sectionContent = `
+        <section class="bg-white py-8">
+            <div id="modals-container">
+                ${modalsHtml} <!-- Insert generated modals here -->
+            </div>
+        </section>
+    `;
+
+    // Render the glasses.handlebars template with the product data and section content
     res.render('glasses', { sectionContent, products });
 });
 
