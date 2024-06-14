@@ -152,9 +152,9 @@
 
         <div class="ml-auto flex items-center">
           <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-            <a href="./login.index.html" class="text-sm  text-gray-700 hover:text-gray-800">Sign in</a>
+            <a href="./login.html" class="text-sm  text-gray-700 hover:text-gray-800">Sign in</a>
             <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
-            <a href="./createAccount.index.html" class="text-sm text-gray-700 hover:text-gray-800">Create account</a>
+            <a href="./createAccount.html" class="text-sm text-gray-700 hover:text-gray-800">Create account</a>
           </div>
           <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
@@ -186,66 +186,6 @@
   <!-- component -->
 
   <!-- Cart Here?-->
-  <div x-data="{ cartOpen: false , isOpen: false }" class="bg-white">
-    <header>
-
-      <div class="container mx-auto px-6 py-3">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center justify-end w-full">
-            <div class="flex sm:hidden">
-              <button @click="isOpen = !isOpen" type="button"
-                class="text-gray-600 hover:text-gray-500 focus:outline-none focus:text-gray-500"
-                aria-label="toggle menu">
-                <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
-                  <path fill-rule="evenodd"
-                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
-                  </path>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div id="" class="mt-6">
-    <div id="cartItemsContainer" :class="cartOpen ? 'translate-x-0 ease-out' : 'translate-x-full ease-in'"
-      class="fixed right-0 top-0 max-w-xs w-full h-full px-6 py-4 transition duration-300 transform overflow-y-auto bg-white border-l-2 border-gray-300">
-      <div class="flex items-center justify-between">
-        <h3 class="text-2xl font-medium text-gray-700">Your cart</h3>
-        <button id="cartCloser" @click="cartOpen = !cartOpen" class="text-gray-600 focus:outline-none">
-          <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-      <hr class="my-3">
-      <div class="flex justify-between mt-6">
-        <div class="flex">
-          <img class="h-20 w-20 object-cover rounded"
-            src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80"
-            alt="">
-          <div class="mx-3">
-            <h3 class="text-sm text-gray-600">Mac Book Pro</h3>
-            <div class="flex items-center mt-2">
-              <button class="increment-button text-gray-500 focus:outline-none focus:text-gray-600">
-                <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              </button>
-              <span id="countDisplay" class="text-gray-700 mx-2">2</span>
-              <button class="decrement-button text-gray-500 focus:outline-none focus:text-gray-600">
-                <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-        <span class="text-gray-600">20$</span>
-      </div>
       <a
         class="flex items-center justify-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
         <span>Checkout</span>
@@ -259,8 +199,9 @@
   </div>
 </div>
 </body>
+<!-- is this html closing tag supposed to be here? -->
+</html> 
 
-</html>
 <!--Mens Flyout-->
 <main id="mensFlyout" class="my-8 flyout-menu">
   <div class="container mx-auto px-6">
@@ -269,11 +210,12 @@
       <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
         <div class="px-10 max-w-xl">
           <h2 class="text-2xl text-white font-semibold">Apparel</h2>
-          <p class="mt-2 text-gray-400">"Explore our wholesale men's apparel section, offering a diverse range of
-            stylish and versatile clothing options.
-            From classic shirts to trendy outerwear, find the perfect pieces to elevate any wardrobe."</p>
-            <a href="/apparel" class="inline-flex px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
-              <span>Shop Now</span>
+          <p class="mt-2 text-gray-400">"Explore our stylish and unique men's apparel section, featuring a diverse range of tops, bottoms & sweaters."</p>
+            
+          <!-- Men's apparel route -->
+          <a href="/apparel-M" class="inline-flex px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+              
+            <span>Shop Now</span>
               <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
@@ -286,11 +228,12 @@
         style="background-image: url('https://images.unsplash.com/photo-1547949003-9792a18a2601?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')">
         <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
           <div class="px-10 max-w-xl">
-            <h2 class="text-2xl text-white font-semibold">Accessories</h2>
-            <p class="mt-2 text-gray-400">"Discover our wholesale accessories for men, featuring a curated selection of
-              stylish and functional items.
-              From sleek watches to dashing cologne, find the perfect finishing touches to complement any look."</p>
-            <a href="./accessories"
+            <h2 class="text-2xl text-white font-semibold">Shoes</h2>
+            <p class="mt-2 text-gray-400">"Find the perfect touch to complete any outfit by browsing our curated collection of Men's footwear."</p>
+            
+            <!-- Shoes route -->
+            <a href="./shoes-M"
+
               class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
               <span>Shop Now</span>
               <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -306,10 +249,11 @@
         <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
           <div class="px-10 max-w-xl">
             <h2 class="text-2xl text-white font-semibold">Glasses</h2>
-            <p class="mt-2 text-gray-400">"Browse our wholesale glasses category for a diverse range of stylish eyewear.
-              With options ranging from classic to contemporary, find the perfect frames to suit any customer's style."
-            </p>
+            <p class="mt-2 text-gray-400">"Discover unique frames to complete your look."</p>
+            
+            <!-- Glasses route -->
             <a href="./glasses"
+
               class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
               <span>Shop Now</span>
               <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -329,83 +273,82 @@
         <nav id="store" class="w-full z-30 top-0 px-6 py-1">
           <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
 
-            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
-              href="/watches">
-              Watches
-            </a>
-          </div>
-        </nav>
-
-        <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-          <a href="#" id="product1">
-            <img class="hover:grow hover:shadow-lg"
-              src="https://images.unsplash.com/photo-1602752975366-5520991f958d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-            <div class="pt-3 flex items-center justify-between">
-            <!-- Button 1 -->
-<p class="">BREMONT</p>
-<button class="addProduct" data-name="BREMONT" data-price="99.99" data-image="https://images.unsplash.com/photo-1579171931975-97962e46be2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-    </svg>
-</button>
-            </div>
-            <p class="pt-1 text-gray-900">$99.99</p>
-          </a>
-
-        </div>
-
-        <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-          <a href="#">
-            <img class="hover:grow hover:shadow-lg"
-              src="https://images.unsplash.com/photo-1579171931975-97962e46be2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-            <div class="pt-3 flex items-center justify-between">
-              <p class="">BAUME & MERCIER</p>
-<button class="addProduct" data-name="BAUME & MERCIER" data-price="129.99" data-image="https://images.unsplash.com/photo-12345">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-    </svg>
-</button>
-            </div>
-            <p class="pt-1 text-gray-900">$129.99</p>
-          </a>
-        </div>
-
-        <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-          <a href="#">
-            <img class="hover:grow hover:shadow-lg "
-              src="https://images.unsplash.com/photo-1517463700628-5103184eac47?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdhdGNofGVufDB8fDB8fHww">
-            <div class="pt-3 flex items-center justify-between">
-              <p class="">JAEGER-LECOULTRE</p>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </div>
-            <p class="pt-1 text-gray-900">$149.99</p>
-          </a>
-        </div>
-
-        <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-          <a href="#">
-            <img class="hover:grow hover:shadow-lg"
-              src="https://images.unsplash.com/photo-1456444029056-7dfaeeb83a19?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-            <div class="pt-3 flex items-center justify-between">
-              <p class="">PATEK PHILIPPE </p>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </div>
-            <p class="pt-1 text-gray-900">$199.99</p>
-          </a>
-        </div>
-        <section class="bg-white py-8">
+                 <!-- Watches route -->
+                 <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
+                 href="/watches">
+                 Watches
+               </a>
+             </div>
+           </nav>
+               <!-- Watches Display -->
+           <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+             <a href="#" id="product1">
+               <img class="hover:grow hover:shadow-lg"
+                 src="./images/mens-watches-1.jpeg">
+               <div class="pt-3 flex items-center justify-between">
+                 <p class="">QUARTZ</p>
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                   stroke="currentColor">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                 </svg>
+               </div>
+               <p class="pt-1 text-gray-900">$99.99</p>
+             </a>
+   
+           </div>
+   
+           <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+             <a href="#">
+               <img class="hover:grow hover:shadow-lg"
+                 src="./images/mens-watches-2.jpeg">
+               <div class="pt-3 flex items-center justify-between">
+                 <p class="">EMERALD</p>
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                   stroke="currentColor">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                 </svg>
+               </div>
+               <p class="pt-1 text-gray-900">$149.99</p>
+             </a>
+           </div>
+   
+           <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+             <a href="#">
+               <img class="hover:grow hover:shadow-lg "
+                 src="./images/mens-watches-3.jpeg">
+               <div class="pt-3 flex items-center justify-between">
+                 <p class="">CELESTIAL</p>
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                   stroke="currentColor">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                 </svg>
+               </div>
+               <p class="pt-1 text-gray-900">$129.99</p>
+             </a>
+           </div>
+   
+           <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+             <a href="#">
+               <img class="hover:grow hover:shadow-lg"
+                 src="./images/mens-watches-4.jpeg">
+               <div class="pt-3 flex items-center justify-between">
+                 <p class="">NOCHE</p>
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                   stroke="currentColor">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                 </svg>
+               </div>
+               <p class="pt-1 text-gray-900">$169.99</p>
+             </a>
+           </div>
+           <section class="bg-white py-8">
 
           <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
 
             <nav id="store" class="w-full z-30 top-0 px-6 py-1">
               <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
 
+                <!-- Cologne route -->
                 <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
                   href="/cologne">
                   Cologne
@@ -413,11 +356,11 @@
 
               </div>
             </nav>
-
+            <!-- Display colognes section -->
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
               <a href="#">
                 <img class="hover:grow hover:shadow-lg"
-                  src="https://t3.ftcdn.net/jpg/04/19/87/42/360_F_419874276_nxcTtIsjxNAFVAj8hBkIIsCAkw8UuOHX.jpg">
+                  src="./images/mens-cologne-5.jpeg">
                 <div class="pt-3 flex items-center justify-between">
                   <p class="">DIOR</p>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -425,7 +368,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                   </svg>
                 </div>
-                <p class="pt-1 text-gray-900">$19.99</p>
+                <p class="pt-1 text-gray-900">$179.99</p>
               </a>
 
             </div>
@@ -433,45 +376,45 @@
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
               <a href="#">
                 <img class="hover:grow hover:shadow-lg"
-                  src="https://st4.depositphotos.com/36741118/38089/i/450/depositphotos_380890446-stock-photo-mens-perfume-toilet-water-suit.jpg">
+                  src="./images/mens-cologne-3.jpeg">
                 <div class="pt-3 flex items-center justify-between">
-                  <p class="">CHANEL</p>
+                  <p class="">BURBERRY</p>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                   </svg>
                 </div>
-                <p class="pt-1 text-gray-900">$29.99</p>
+                <p class="pt-1 text-gray-900">$129.99</p>
               </a>
             </div>
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
               <a href="#">
                 <img class="hover:grow hover:shadow-lg"
-                  src="https://st2.depositphotos.com/35003014/43315/i/450/depositphotos_433157266-stock-photo-men-perfume-black-leaves-wooden.jpg">
+                  src="./images/mens-cologne-1.jpeg">
                 <div class="pt-3 flex items-center justify-between">
-                  <p class="">RALPH LAUREN</p>
+                  <p class="">YSL</p>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                   </svg>
                 </div>
-                <p class="pt-1 text-gray-900">$34.99</p>
+                <p class="pt-1 text-gray-900">$129.99</p>
               </a>
             </div>
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
               <a href="#">
                 <img class="hover:grow hover:shadow-lg"
-                  src="https://thumbs.dreamstime.com/b/bottle-mens-cologne-cufflinks-blue-tie-lie-black-luxury-fabric-background-wooden-table-mens-classic-212712647.jpg">
+                  src="./images/mens-cologne-4.jpeg">
                 <div class="pt-3 flex items-center justify-between">
-                  <p class="">VERSACE</p>
+                  <p class="">CHROME</p>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                   </svg>
                 </div>
-                <p class="pt-1 text-gray-900">$39.99</p>
+                <p class="pt-1 text-gray-900">$99.99</p>
               </a>
             </div>
           </div>
@@ -484,10 +427,9 @@
       <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
         <div class="px-10 max-w-xl">
           <h2 class="text-2xl text-white font-semibold">Apparel</h2>
-          <p class="mt-2 text-gray-400">"Browse our wholesale women's apparel section for a curated collection of
-            fashionable and versatile clothing.
-            From elegant dresses to casual tops, discover the perfect pieces to elevate any wardrobe."</p>
-          <a href="/apparel2"
+          <p class="mt-2 text-gray-400">"Explore our curated collections of dreamy apparel."</p>
+          <!-- Women's apparel route -->
+          <a href="/apparel-W"
             class="inline-flex   px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
             <span>Shop Now</span>
             <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -504,10 +446,11 @@
         <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
           <div class="px-10 max-w-xl">
             <h2 class="text-2xl text-white font-semibold">Accessories</h2>
-            <p class="mt-2 text-gray-400">"Discover our wholesale women's accessories, featuring a curated selection of
-              stylish and versatile pieces.
-              From chic handbags to elegant add-ons, find the perfect finishing touches to elevate any outfit."</p>
-            <a href="/accessories2"
+            <p class="mt-2 text-gray-400">"Discover unique women's accessories to add the perfect finishing touches to any outfit."</p>
+
+                <!-- Accessories route -->
+                <a href="/accessories"
+
               class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
               <span>Shop Now</span>
               <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -523,11 +466,11 @@
         <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
           <div class="px-10 max-w-xl">
             <h2 class="text-2xl text-white font-semibold">Jewelry</h2>
-            <p class="mt-2 text-gray-400">"Explore our wholesale women's jewelry collection, meticulously curated with
-              stylish and elegant pieces.
-              Find the perfect accessories to add a touch of glamour to
-              any ensemble."</p>
+            <p class="mt-2 text-gray-400">"Find the perfect jewels to add a touch of glamour to any ensemble."</p>
+
+            <!-- Jewelry route -->
             <a href="/jewelry"
+
               class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
               <span>Shop Now</span>
               <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -547,11 +490,13 @@
         <nav id="store" class="w-full z-30 top-0 px-6 py-1">
           <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
 
+            <!-- Perfume route -->
             <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
-              href="/bracelets">
-              Bracelets
+              href="/perfume-W"> 
+              Perfume
             </a>
 
+            <!-- Perfume Display Bar -->
 
           </div>
         </nav>
@@ -559,40 +504,9 @@
         <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
           <a href="#">
             <img class="hover:grow hover:shadow-lg"
-              src="https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=600">
+              src="./images/womens-perfume-1.jpeg">
             <div class="pt-3 flex items-center justify-between">
-              <p class="">TIFFANY & CO</p>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </div>
-            <p class="pt-1 text-gray-900">$49.99</p>
-          </a>
-
-        </div>
-
-        <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-          <a href="#">
-            <img class="hover:grow hover:shadow-lg"
-              src="https://images.pexels.com/photos/1306262/pexels-photo-1306262.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="pt-3 flex items-center justify-between">
-              <p class="">CARTIER</p>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </div>
-            <p class="pt-1 text-gray-900">$59.99</p>
-          </a>
-        </div>
-
-        <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-          <a href="#">
-            <img class="hover:grow hover:shadow-lg "
-              src="https://images.pexels.com/photos/814662/pexels-photo-814662.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="pt-3 flex items-center justify-between">
-              <p class="">CELINE</p>
+              <p class="">FLORAL DREAMS</p>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
@@ -600,20 +514,51 @@
             </div>
             <p class="pt-1 text-gray-900">$69.99</p>
           </a>
+
         </div>
 
         <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
           <a href="#">
             <img class="hover:grow hover:shadow-lg"
-              src="https://images.pexels.com/photos/37826/nature-hand-natural-people-37826.jpeg?auto=compress&cs=tinysrgb&w=600">
+              src="./images/womens-perfume-2.jpeg">
             <div class="pt-3 flex items-center justify-between">
-              <p class="">PURE VIDA</p>
+              <p class="">CARTIER</p>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </div>
+            <p class="pt-1 text-gray-900">$119.99</p>
+          </a>
+        </div>
+
+        <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+          <a href="#">
+            <img class="hover:grow hover:shadow-lg "
+              src="./images/womens-perfume-3.jpeg">
+            <div class="pt-3 flex items-center justify-between">
+              <p class="">PRINCESSA</p>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
               </svg>
             </div>
             <p class="pt-1 text-gray-900">$79.99</p>
+          </a>
+        </div>
+
+        <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+          <a href="#">
+            <img class="hover:grow hover:shadow-lg"
+              src="./images/womens-perfume-4.jpeg">
+            <div class="pt-3 flex items-center justify-between">
+              <p class="">STARRY NIGHT</p>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </div>
+            <p class="pt-1 text-gray-900">$129.99</p>
           </a>
         </div>
         <section class="bg-white py-8">
@@ -623,76 +568,76 @@
             <nav id="store" class="w-full z-30 top-0 px-6 py-1">
               <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
 
+                 <!-- Women's shoes route -->
                 <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
-                  href="/perfume">
-                  Perfume
+                  href="/shoes-W">
+                  Shoes
                 </a>
-
-
               </div>
             </nav>
-
+        <!-- Shoes Display -->
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
               <a href="#">
                 <img class="hover:grow hover:shadow-lg"
-                  src="https://images.pexels.com/photos/9944432/pexels-photo-9944432.jpeg?auto=compress&cs=tinysrgb&w=600">
+                  src="./images/womens-shoes-3.jpeg">
                 <div class="pt-3 flex items-center justify-between">
-                  <p class="">ARMANI</p>
+                  <p class="">BUTTERFLY</p>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                   </svg>
                 </div>
-                <p class="pt-1 text-gray-900">$29.99</p>
+                <p class="pt-1 text-gray-900">$129.99</p>
               </a>
             </div>
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
               <a href="#">
                 <img class="hover:grow hover:shadow-lg"
-                  src="https://images.pexels.com/photos/4736017/pexels-photo-4736017.jpeg?auto=compress&cs=tinysrgb&w=600">
+                  src="./images/womens-shoes-1.jpeg">
                 <div class="pt-3 flex items-center justify-between">
-                  <p class="">CALVIN KLEIN</p>
+                  <p class="">EDEN</p>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                   </svg>
                 </div>
-                <p class="pt-1 text-gray-900">$34.99</p>
+                <p class="pt-1 text-gray-900">$129.99</p>
               </a>
             </div>
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
               <a href="#">
                 <img class="hover:grow hover:shadow-lg"
-                  src="https://images.pexels.com/photos/965990/pexels-photo-965990.jpeg?auto=compress&cs=tinysrgb&w=600">
+                  src="./images/womens-shoes-4.jpeg">
                 <div class="pt-3 flex items-center justify-between">
-                  <p class="">DOLCE & GABBANA</p>
+                  <p class="">TULIPS</p>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                   </svg>
                 </div>
-                <p class="pt-1 text-gray-900">$39.99</p>
+                <p class="pt-1 text-gray-900">$199.99</p>
               </a>
             </div>
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
               <a href="#">
                 <img class="hover:grow hover:shadow-lg"
-                  src="https://images.pexels.com/photos/1200502/pexels-photo-1200502.jpeg?auto=compress&cs=tinysrgb&w=600">
+                  src="./images/womens-shoes-5.jpeg">
                 <div class="pt-3 flex items-center justify-between">
-                  <p class="">CHANEL</p>
+                  <p class="">BOWTIFUL</p>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                   </svg>
                 </div>
-                <p class="pt-1 text-gray-900">$44.99</p>
+                <p class="pt-1 text-gray-900">$199.99</p>
               </a>
             </div>
           </div>
 </main>
+
 <!--Footer Section Here-->
 <footer class="container mx-auto bg-white py-2 border-t border-gray-400">
   <div class="container flex px-3 py-8 ">
@@ -700,43 +645,12 @@
       <div class="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
         <div class="col-start-2 grid grid-cols-2 gap-x-8">
           <div class="group relative text-base sm:text-sm">
-            <div class="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-              <img
-                src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Models sitting back to back, wearing Basic Tee in black and bone."
-                class="object-cover object-center">
-            </div>
-            <a href="/new" class="mt-6 block font-medium text-gray-900">
-              <span class="absolute inset-0 z-10" aria-hidden="true"></span>
-              New Arrivals
-            </a>
-            <p aria-hidden="true" class="mt-1">Shop now</p>
-          </div>
-          <div class="group relative text-base sm:text-sm">
-            <div class="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-              <img src="https://burst.shopifycdn.com/photos/tshirts.jpg?width=1000&format=pjpg&exif=0&iptc=0"
-                alt="Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees."
-                class="object-cover object-center">
-            </div>
-            <a href="/tees" class="mt-6 block font-medium text-gray-900">
-              <span class="absolute inset-0 z-10" aria-hidden="true"></span>
-              Basic Tees
-            </a>
-            <p aria-hidden="true" class="mt-1">Shop now</p>
-          </div>
-        </div>
-        <div class="row-start-1 grid grid-cols-2 gap-x-8 gap-y-10 text-sm">
-          <div>
+            
+            <!-- Men's Collections -->
             <p id="Clothing-heading" class="font-medium text-gray-900">His</p>
             <ul role="list" aria-labelledby="Clothing-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
               <li class="flex">
-                <a href="/apparel" class="hover:text-gray-800">Apparel</a>
-              </li>
-              <li class="flex">
-                <a href="/accessories" class="hover:text-gray-800">Accessories</a>
-              </li>
-              <li class="flex">
-                <a href="/glasses" class="hover:text-gray-800">Glasses</a>
+                <a href="/apparel-M" class="hover:text-gray-800">Apparel</a>
               </li>
               <li class="flex">
                 <a href="/watches" class="hover:text-gray-800">Watches</a>
@@ -744,25 +658,32 @@
               <li class="flex">
                 <a href="/cologne" class="hover:text-gray-800">Cologne</a>
               </li>
+              <li class="flex">
+                <a href="/glasses" class="hover:text-gray-800">Glasses</a>
+              </li>
+              <li class="flex">
+                <a href="/shoes-M" class="hover:text-gray-800">Shoes</a>
+              </li>
             </ul>
           </div>
           <div>
+             <!-- Women's Collections -->
             <p id="Accessories-heading" class="font-medium text-gray-900">Her</p>
             <ul role="list" aria-labelledby="Accessories-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
               <li class="flex">
-                <a href="/apparel2" class="hover:text-gray-800">Apparel</a>
+                <a href="/apparel-W" class="hover:text-gray-800">Apparel</a>
               </li>
               <li class="flex">
-                <a href="/accessories2" class="hover:text-gray-800">Accessories</a>
+                <a href="/accessories" class="hover:text-gray-800">Accessories</a>
               </li>
               <li class="flex">
                 <a href="/jewelry" class="hover:text-gray-800">Jewelry</a>
               </li>
               <li class="flex">
-                <a href="/bracelets" class="hover:text-gray-800">Bracelets</a>
+                <a href="/perfume" class="hover:text-gray-800">Perfume</a>
               </li>
               <li class="flex">
-                <a href="/perfume" class="hover:text-gray-800">Perfume</a>
+                <a href="/shoes-W" class="hover:text-gray-800">Shoes</a>
               </li>
             </ul>
           </div>
@@ -774,8 +695,8 @@
           <div class="px-3 md:px-0">
             <h3 class="font-bold text-gray-900">About</h3>
             <p class="py-4">
-              Welcome to "Dream Threads," your go-to wholesale destination for quality fabrics and textiles. We pride
-              ourselves on offering a diverse selection of materials that cater to various tastes and needs.
+              Welcome to "Dream Threads," a curiously-curated collection of unique and fantastical items you won't find just anywhere. 
+              Our collections offer a diverse selection of apparel, accessories, fragrences and more that will transport you to the land of your dreams.
               Whether you're looking for the soft touch of chiffon or the rich texture of brocade, we've got you
               covered. Our commitment to quality means that you can trust in the durability and elegance of every thread
               we offer.
