@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
         {
             product_id: 21,
             name: 'Denim Star Shoes',
-            filename: 'mens-shoes-1.jpeg',
+            image: 'mens-shoes-1.jpeg',
             price: '99.99',
             description: 'Sneakers with denim detailing in mens sizing.',
             colors: 'Blue',
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
         {
             product_id: 22,
             name: 'Starry Sneakers',
-            filename: 'mens-shoes-2.jpeg',
+            image: 'mens-shoes-2.jpeg',
             price: '99.99',
             description: 'Sneakers with suede star detailing in mens sizing.',
             colors: 'Green',
@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
         {
             product_id: 23,
             name: 'Dragonfly Boots',
-            filename: 'mens-shoes-3.jpeg',
+            image: 'mens-shoes-3.jpeg',
             price: '119.99',
             description: 'Boots with gold detailing in mens sizing.',
             colors: 'Black',
@@ -38,7 +38,7 @@ router.get('/', (req, res) => {
         {
             product_id: 24,
             name: 'Lion Boots',
-            filename: 'mens-shoes-4.jpeg',
+            image: 'mens-shoes-4.jpeg',
             price: '119.99',
             description: 'Boots with leather detailing in mens sizing.',
             colors: ['Brown', 'Olive Green'],
@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
         {
             product_id: 25,
             name: 'Doodle Sneakers',
-            filename: 'mens-shoes-5.jpeg',
+            image: 'mens-shoes-5.jpeg',
             price: '99.99',
             description: 'Sneakers with illustrative detailing in mens sizing.',
             colors: ['Green', 'Blue'],

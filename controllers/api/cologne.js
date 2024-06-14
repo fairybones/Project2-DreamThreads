@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
         {
             product_id: 11,
             name: 'YSL Cologne',
-            filename: 'mens-cologne-1.jpeg',
+            image: 'mens-cologne-1.jpeg',
             price: '129.99',
             description: 'A dreamy scent with notes of sandalwood & musk.',
             colors: 'One Color',
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
         {
             product_id: 12,
             name: 'Burberry Cologne',
-            filename: 'mens-cologne-2.jpeg',
+            image: 'mens-cologne-2.jpeg',
             price: '179.99',
             description: 'A dreamy scent with notes of bamboo & linen.',
             colors: 'One Color',
@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
         {
             product_id: 13,
             name: 'Burberry Cologne',
-            filename: 'mens-cologne-3.jpeg',
+            image: 'mens-cologne-3.jpeg',
             price: '129.99',
             description: 'A strong scent with notes of sandalwood & musk.',
             colors: 'One Color',
@@ -38,7 +38,7 @@ router.get('/', (req, res) => {
         {
             product_id: 14,
             name: 'Chrome Cologne',
-            filename: 'mens-cologne-4.jpeg',
+            image: 'mens-cologne-4.jpeg',
             price: '99.99',
             description: 'A strong scent with notes of bamboo & linen.',
             colors: 'One Color',
@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
         {
             product_id: 15,
             name: 'Dior Cologne',
-            filename: 'mens-cologne-5.jpeg',
+            image: 'mens-cologne-5.jpeg',
             price: '179.99',
             description: 'A calm scent with floral notes.',
             colors: 'One Color',

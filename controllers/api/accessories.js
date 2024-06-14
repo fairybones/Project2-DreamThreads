@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
         {
             product_id: 41,
             name: 'Oval Sunglasses',
-            filename: 'womens-accessories-1.jpeg',
+            image: 'womens-accessories-1.jpeg',
             price: '129.99',
             description: 'Chunky oval frames in cherry red or classic black.',
             colors: ['Black', 'Red'],
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
         {
             product_id: 42,
             name: 'See No BS',
-            filename: 'womens-accessories-2.jpeg',
+            image: 'womens-accessories-2.jpeg',
             price: '199.99',
             description: 'Colorful goggles to blind the haters.',
             colors: 'Multicolor',
@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
         {
             product_id: 43,
             name: 'Holographic Gloves',
-            filename: 'womens-accessories-3.jpeg',
+            image: 'womens-accessories-3.jpeg',
             price: '69.99',
             description: 'Rainbow reflective gloves that pack a punch!',
             colors: ['Pink Holo', 'Black Holo'],
@@ -38,7 +38,7 @@ router.get('/', (req, res) => {
         {
             product_id: 44,
             name: 'Fluffy Tinted Glasses',
-            filename: 'womens-accessories-4.jpeg',
+            image: 'womens-accessories-4.jpeg',
             price: '29.99',
             description: 'Super soft frames with colored lenses.',
             colors: ['Pink', 'Blue', 'Purple'],
@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
         {
             product_id: 45,
             name: 'My Heart Bag',
-            filename: 'womens-accessories-5.jpeg',
+            image: 'womens-accessories-5.jpeg',
             price: '295.99',
             description: 'Crystallized anatomical heart bag to hold your favorite things.',
             colors: ['Gold', 'Silver'],

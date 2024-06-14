@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
         {
             product_id: 56,
             name: 'Eden Sandal',
-            filename: 'womens-shoes-1.jpeg',
+            image: 'womens-shoes-1.jpeg',
             price: '129.99',
             description: 'Kitten heels with bejeweled floral details in womens sizing.',
             colors: 'Multicolor',
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
         {
             product_id: 57,
             name: 'Fairy Heels',
-            filename: 'womens-shoes-2.jpeg',
+            image: 'womens-shoes-2.jpeg',
             price: '119.99',
             description: 'Fanciful heels featuring fairy wings in womens sizing.',
             colors: 'Pink',
@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
         {
             product_id: 58,
             name: 'Butterfly Heels',
-            filename: 'womens-shoes-3.jpeg',
+            image: 'womens-shoes-3.jpeg',
             price: '129.99',
             description: 'Dreamy heels with silk butterflies in womens sizing.',
             colors: 'Multicolor',
@@ -38,7 +38,7 @@ router.get('/', (req, res) => {
         {
             product_id: 59,
             name: 'Tulip Boots',
-            filename: 'womens-shoes-4.jpeg',
+            image: 'womens-shoes-4.jpeg',
             price: '199.99',
             description: 'Knee high leather boots with flowers in womens sizing.',
             colors: 'Pink',
@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
         {
             product_id: 60,
             name: 'Bow Boots',
-            filename: 'womens-shoes-5.jpeg',
+            image: 'womens-shoes-5.jpeg',
             price: '199.99',
             description: 'Knee high leather boots with bows in womens sizing.',
             colors: 'Pink',

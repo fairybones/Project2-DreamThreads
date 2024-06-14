@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
         {
             product_id: 26,
             name: 'Golden Quartz',
-            filename: 'mens-watches-1.jpeg',
+            image: 'mens-watches-1.jpeg',
             price: '99.99',
             description: 'A water resistant watch that keeps digital & analog time.',
             colors: 'One Color',
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
         {
             product_id: 27,
             name: 'Emerald Watch',
-            filename: 'mens-watches-2.jpeg',
+            image: 'mens-watches-2.jpeg',
             price: '149.99',
             description: 'A water resistant watch that displays analog time.',
             colors: 'One Color',
@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
         {
             product_id: 28,
             name: 'Celestial Watch',
-            filename: 'mens-watches-3.jpeg',
+            image: 'mens-watches-3.jpeg',
             price: '129.99',
             description: 'A celestial-inspired watch that changes from day to night.',
             colors: ['Olive Green', 'Brown', 'Black'],
@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
         {
             product_id: 30,
             name: 'Rose Gold Watch',
-            filename: 'mens-watches-5.jpeg',
+            image: 'mens-watches-5.jpeg',
             price: '169.99',
             description: 'A water resistant watch with rose gold detailing.',
             colors: 'Black',

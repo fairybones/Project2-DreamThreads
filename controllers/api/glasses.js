@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
         {
             product_id: 15,
             name: 'Dior Cologne',
-            filename: 'mens-cologne-5.jpeg',
+            image: 'mens-cologne-5.jpeg',
             price: '179.99',
             description: 'A calm scent with floral notes.',
             colors: 'One Color',
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
         {
             product_id: 16,
             name: 'Golden Sunglasses',
-            filename: 'mens-glasses-1.jpeg',
+            image: 'mens-glasses-1.jpeg',
             price: '129.99',
             description: 'Sunglasses with gold chrome.',
             colors: 'One Color',
@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
         {
             product_id: 17,
             name: '3D Sunglasses',
-            filename: 'mens-glasses-2.jpeg',
+            image: 'mens-glasses-2.jpeg',
             price: '189.99',
             description: 'Futuristic sunglasses that mimic 3D movie glasses.',
             colors: 'One Color',
@@ -38,7 +38,7 @@ router.get('/', (req, res) => {
         {
             product_id: 18,
             name: 'Tinted Sunglasses (Brown)',
-            filename: 'mens-glasses-3.jpeg',
+            image: 'mens-glasses-3.jpeg',
             price: '29.99',
             description: 'Sunglasses with brown frames & colored lenses.',
             colors: ['Blue', 'Yellow', 'Pink'],
@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
         {
             product_id: 19,
             name: 'Tinted Sunglasses (Black)',
-            filename: 'mens-glasses-4.jpeg',
+            image: 'mens-glasses-4.jpeg',
             price: '29.99',
             description: 'Sunglasses with black frames & colored lenses.',
             colors: ['Purple', 'Red', 'Blue'],
@@ -58,7 +58,7 @@ router.get('/', (req, res) => {
         {
             product_id: 20,
             name: 'Polarized Sunglasses',
-            filename: 'mens-glasses-5.jpeg',
+            image: 'mens-glasses-5.jpeg',
             price: '89.99',
             description: 'Polarized sunglasses with tinted lenses.',
             colors: 'One Color',
