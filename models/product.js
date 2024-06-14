@@ -4,13 +4,6 @@ const sequelize = require("../config/connection");
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {}
 
-// products in Collections:
-// Tops = tees, longsleeves, hoodies (custom option)
-// Bottoms = shorts, pants (sweatpants style, customizable) 
-// Hats = cap, bucket 
-// Bags = tote, side 
-// Fans = color/design options
-
 Product.init(
   {
     // define table columns & attributes
