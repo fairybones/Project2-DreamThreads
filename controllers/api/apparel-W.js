@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
         {
             product_id: 31,
             name: 'Ruffle Top',
-            filename: 'womens-apparel-1.jpeg',
+            image: 'womens-apparel-1.jpeg',
             price: '29.99',
             description: 'A chiffon blouse with ruffle detailing',
             colors: ['Rose', 'White'],
@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
         {
             product_id: 32,
             name: 'Floral Lace Top',
-            filename: 'womens-apparel-2.jpeg',
+            image: 'womens-apparel-2.jpeg',
             price: '29.99',
             description: 'A floral camisole with lace details',
             colors: 'Multicolor',
@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
         {
             product_id: 33,
             name: 'Laced Bustier',
-            filename: 'womens-apparel-3.jpeg',
+            image: 'womens-apparel-3.jpeg',
             price: '59.99',
             description: 'A structured top with pink ribbon lacing.',
             colors: 'Multicolor',
@@ -39,7 +39,7 @@ router.get('/', (req, res) => {
         {
             product_id: 34,
             name: 'Butterfly Top',
-            filename: 'womens-apparel-4.jpeg',
+            image: 'womens-apparel-4.jpeg',
             price: '59.99',
             description: 'A bejeweled butterfly-shaped lace up top.',
             colors: 'Multicolor',
@@ -49,7 +49,7 @@ router.get('/', (req, res) => {
         {
             product_id: 35,
             name: 'Asymmetrical Dress',
-            filename: 'womens-apparel-5.jpeg',
+            image: 'womens-apparel-5.jpeg',
             price: '89.99',
             description: 'A ruffled dress with an asymmetrical hem.',
             colors: ['Black', 'White'],
@@ -59,7 +59,7 @@ router.get('/', (req, res) => {
         {
             product_id: 36,
             name: 'Love Letters Dress',
-            filename: 'womens-apparel-6.jpeg',
+            image: 'womens-apparel-6.jpeg',
             price: '99.99',
             description: 'A rose colored dress with an asymmetrical hem.',
             colors: 'Pink',
@@ -69,7 +69,7 @@ router.get('/', (req, res) => {
         {
             product_id: 37,
             name: 'Fae Skort',
-            filename: 'womens-apparel-7.jpeg',
+            image: 'womens-apparel-7.jpeg',
             price: '49.99',
             description: 'This fantastical skirt has shorts and butterfly details.',
             colors: 'Multicolor',
@@ -79,7 +79,7 @@ router.get('/', (req, res) => {
         {
             product_id: 38,
             name: 'Mermaiden Top',
-            filename: 'womens-apparel-8.jpeg',
+            image: 'womens-apparel-8.jpeg',
             price: '29.99',
             description: 'A mesh camisole with shell-shaped lace.',
             colors: 'Seafoam',
@@ -89,7 +89,7 @@ router.get('/', (req, res) => {
         {
             product_id: 39,
             name: 'Brocade Pants',
-            filename: 'womens-apparel-9.jpeg',
+            image: 'womens-apparel-9.jpeg',
             price: '79.99',
             description: 'High waisted flare pants with brocade detailing.',
             colors: 'Cream',
@@ -99,7 +99,7 @@ router.get('/', (req, res) => {
         {
             product_id: 40,
             name: 'Beaded Dress',
-            filename: 'womens-apparel-10.jpeg',
+            image: 'womens-apparel-10.jpeg',
             price: '199.99',
             description: 'A peach dress with hand-sewn details',
             colors: 'Multicolor',

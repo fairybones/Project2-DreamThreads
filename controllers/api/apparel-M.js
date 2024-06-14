@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
         {
             product_id: 1,
             name: 'Swirly Sweater',
-            filename: 'mens-apparel-1.jpeg',
+            image: "public\images\mens-apparel-1.jpeg",
             price: '99.99',
             description: 'A comfortable swirly sweater for men.',
             colors: ['Black', 'White'],
@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
         {
             product_id: 2,
             name: 'Cactus Shirt',
-            filename: 'mens-apparel-2.jpeg',
+            image: 'mens-apparel-2.jpeg',
             price: '39.99',
             description: 'A collared shirt with cactus details.',
             colors: ['Orange', 'Green'],
@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
         {
             product_id: 3,
             name: 'Rose Shirt',
-            filename: 'mens-apparel-3.jpeg',
+            image: 'mens-apparel-3.jpeg',
             price: '39.99',
             description: 'A collared shirt with rose details.',
             colors: ['Mint', 'Green', 'Pink'],
@@ -39,7 +39,7 @@ router.get('/', (req, res) => {
         {
             product_id: 4,
             name: 'Painting Shirt',
-            filename: 'mens-apparel-4.jpeg',
+            image: 'mens-apparel-4.jpeg',
             price: '39.99',
             description: 'A collared shirt that looks like an oil painting.',
             colors: ['Blue', 'Green'],
@@ -49,7 +49,7 @@ router.get('/', (req, res) => {
         {
             product_id: 5,
             name: 'Celestial Shirt',
-            filename: 'mens-apparel-5.jpeg',
+            image: 'mens-apparel-5.jpeg',
             price: '39.99',
             description: 'A collared shirt with a cat and celestial details.',
             colors: ['Red', 'Blue'],
@@ -59,7 +59,7 @@ router.get('/', (req, res) => {
         {
             product_id: 6,
             name: 'Continental Cargo Shorts',
-            filename: 'mens-apparel-6.jpeg',
+            image: 'mens-apparel-6.jpeg',
             price: '49.99',
             description: 'Canvas shorts with map details.',
             colors: ['Beige', 'Green'],
@@ -69,7 +69,7 @@ router.get('/', (req, res) => {
         {
             product_id: 7,
             name: 'Embroidered Shorts',
-            filename: 'mens-apparel-7.jpeg',
+            image: 'mens-apparel-7.jpeg',
             price: '39.99',
             description: 'Comfortable shorts with embroidered details.',
             colors: ['Cream', 'White'],
@@ -79,7 +79,7 @@ router.get('/', (req, res) => {
         {
             product_id: 8,
             name: 'Dino Sweater',
-            filename: 'mens-apparel-8.jpeg',
+            image: 'mens-apparel-8.jpeg',
             price: '69.99',
             description: 'A patchwork sweater with different prints and dinosaurs.',
             colors: ['Red', 'Blue', 'Green'],
@@ -89,7 +89,7 @@ router.get('/', (req, res) => {
         {
             product_id: 9,
             name: 'Linen Pants',
-            filename: 'mens-apparel-9.jpeg',
+            image: 'mens-apparel-9.jpeg',
             price: '29.99',
             description: 'Comfortable, 100% cotton pants for men.',
             colors: ['Beige', 'Cream', 'Oatmeal'],
@@ -99,7 +99,7 @@ router.get('/', (req, res) => {
         {
             product_id: 10,
             name: 'Rainbow Sweater',
-            filename: 'mens-apparel-10.jpeg',
+            image: 'mens-apparel-10.jpeg',
             price: '69.99',
             description: 'A thick sweater with rainbow hues.',
             colors: ['Rainbow', 'Pastel Edition'],

@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
         {
             product_id: 51,
             name: 'Dragon Ring',
-            filename: 'womens-jewelry-1.jpeg',
+            image: 'womens-jewelry-1.jpeg',
             price: '79.99',
             description: 'A bejeweled dragon ring with purple, red, and blue gemstones.',
             colors: ['Purple', 'Red', 'Blue'],
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
         {
             product_id: 52,
             name: 'Birds Ring',
-            filename: 'womens-jewelry-2.jpeg',
+            image: 'womens-jewelry-2.jpeg',
             price: '89.99',
             description: 'A bejeweled ring with red and pink birds made of gemstones.',
             colors: ['Gold', 'Silver'],
@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
         {
             product_id: 53,
             name: 'Celestial Earrings',
-            filename: 'womens-jewelry-3.jpeg',
+            image: 'womens-jewelry-3.jpeg',
             price: '79.99',
             description: 'Dazzling earrings dripping with stars.',
             colors: 'One Color',
@@ -38,7 +38,7 @@ router.get('/', (req, res) => {
         {
             product_id: 54,
             name: 'Gem Bracelet',
-            filename: 'womens-jewelry-4.jpeg',
+            image: 'womens-jewelry-4.jpeg',
             price: '109.99',
             description: 'A chain bracelet with multicolor gemstones.',
             colors: ['Gold', 'Silver'],
@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
         {
             product_id: 55,
             name: 'Gem Necklace',
-            filename: 'womens-jewelry-5.jpeg',
+            image: 'womens-jewelry-5.jpeg',
             price: '199.99',
             description: 'A chain featuring multicolor gemstones.',
             colors: ['Gold', 'Silver'],
