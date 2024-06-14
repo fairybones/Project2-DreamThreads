@@ -12,7 +12,6 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 
-
 const sess = {
     secret: 'Super secret secret',
     cookie: {
@@ -28,8 +27,8 @@ const sess = {
     }),
 };
 
-const apparelRoutes = require('./controllers/api/apparel');
-app.use('/apparel', apparelRoutes);
+const apparelRoutes = require('./controllers/api/apparel-M');
+app.use('/apparel-M', apparelRoutes);
 
 const accessoriesRoutes = require('./controllers/api/accessories');
 app.use('/accessories', accessoriesRoutes);
@@ -43,26 +42,26 @@ app.use('/watches', watchesRoutes);
 const cologneRoutes = require('./controllers/api/cologne');
 app.use('/cologne', cologneRoutes);
 
-const apparel2Routes = require('./controllers/api/apparel2');
-app.use('/apparel2', apparel2Routes);
+const apparel2Routes = require('./controllers/api/apparel-W');
+app.use('/apparel-W', apparel2Routes);
 
-const accessories2Routes = require('./controllers/api/accessories2');
-app.use('/accessories2', accessories2Routes);
+const accessories2Routes = require('./controllers/api/accessories');
+app.use('/accessories', accessories2Routes);
 
 const jewelryRoutes = require('./controllers/api/jewelry');
 app.use('/jewelry', jewelryRoutes);
 
-const braceletsRoutes = require('./controllers/api/bracelets');
-app.use('/bracelets', braceletsRoutes);
+//const braceletsRoutes = require('./controllers/api/bracelets');
+//app.use('/bracelets', braceletsRoutes);
 
 const perfumeRoutes = require('./controllers/api/perfume');
 app.use('/perfume', perfumeRoutes);
 
-const newRoutes = require('./controllers/api/new');
-app.use('/new', newRoutes);
+//const newRoutes = require('./controllers/api/new');
+//app.use('/new', newRoutes);
 
-const teesRoutes = require('./controllers/api/tees');
-app.use('/tees', teesRoutes);
+//const teesRoutes = require('./controllers/api/tees');
+//app.use('/tees', teesRoutes);
 
 const loginRoutes = require("./controllers/api/user-routes");
 app.use('/login', loginRoutes);
