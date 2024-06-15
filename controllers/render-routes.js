@@ -38,7 +38,7 @@ router.get("/cart", (req, res) => {
     if(req.session.loggedIn == true) {
         res.render("cart", {
             logged_in: req.session.loggedIn,
-            layout: "alternate",
+            layout: "landing",
             cart: [
                 
             ]
