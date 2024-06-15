@@ -83,7 +83,7 @@ router.get('/', (req, res) => {
     `;
 
     // Render the accessories.handlebars template with the product data and section content
-    res.render('accessories', { sectionContent, products });
+    res.render('accessories', { sectionContent, products, logged_in: req.session.loggedIn });
 });
 
 module.exports = router;

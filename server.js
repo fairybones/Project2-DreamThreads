@@ -28,6 +28,9 @@ const sess = {
     }),
 };
 
+
+app.use(session(sess));
+
 const apparelRoutes = require('./controllers/api/apparel');
 app.use('/apparel', apparelRoutes);
 
@@ -67,7 +70,6 @@ app.use('/tees', teesRoutes);
 const loginRoutes = require("./controllers/api/user-routes");
 app.use('/login', loginRoutes);
 
-app.use(session(sess));
 
 // Parse incoming request bodies with JSON payloads
 app.use(express.json());

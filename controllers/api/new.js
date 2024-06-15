@@ -59,7 +59,7 @@ router.get('/', (req, res) => {
     const sectionContent = '<section class="bg-white py-8">  </section>';
 
     // Render the accessories.handlebars template with the product data and section content
-    res.render('new', { sectionContent, products });
+    res.render('new', { sectionContent, products, logged_in: req.session.loggedIn });
 });
 
 module.exports = router;
