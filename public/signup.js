@@ -22,22 +22,15 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!response.ok) {
         console.log('Account not created successfully');
         return null;
-        // Redirect to login page 
-        // window.location.href = './login.index.html';
       } 
 
-      return await response.json()
-      // else {
-      //   console.error('Failed to create account - Status:', response.status);
-      //   // Show error message to the user based on the response status
-      //   if (response.status === 0) {
-      //     console.error('Network error - Check server connection');
-      //   } else if (response.status === 404) {
-      //     console.error('Resource not found - Check server endpoint');
-      //   } else {
-      //     console.error('Unexpected error occurred');
-      //   }
-      // }
+      // Account created successfully
+      console.log('Account created successfully');
+      // Display a message to the user
+      alert('Account created successfully! You will now be redirected to the homepage.');
+      // Redirect to the homepage
+      window.location.href = '/homepage';
+
     } catch (error) {
       console.error('Error creating account:', error);
       // Handle any other errors that occur during the fetch request
