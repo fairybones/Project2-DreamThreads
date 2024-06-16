@@ -31,9 +31,6 @@ User.init(
         len: [6],
       },
     },
-    // cart: {
-
-    // }
   },
   {
     hooks: {
