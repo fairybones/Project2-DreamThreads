@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Collection extends Model {}
-// collections: tops, bottoms, hats, bags, fans
+class Cart extends Model {}
 
-Collection.init(
+
+Cart.init(
   {
     // define table columns & attributes
     id: {
@@ -13,18 +13,33 @@ Collection.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    collection_name: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    img: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    price: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id"
+      }
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "collection",
+    modelName: "cart",
   }
 );
 
-module.exports = Collection;
+module.exports = Cart;

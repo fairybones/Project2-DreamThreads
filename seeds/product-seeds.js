@@ -1,9 +1,9 @@
-const { Product } = require("../models");
-const image = require("../images");
+// product seeds
+const { Product } = require('../models/product');
 
 const productData = [
   {
-    id: '1',
+    id: 'masc1',
     name: "Swirly Sweater",
     image: "mens-apparel-1.jpeg",
     price: "99.99",
@@ -13,7 +13,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '2',
+    id: 'masc1',
     name: "Cactus Shirt",
     image: "mens-apparel-2.jpeg",
     price: "39.99",
@@ -23,7 +23,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '3',
+    id: 'masc1',
     name: "Rose Shirt",
     image: "mens-apparel-3.jpeg",
     price: "39.99",
@@ -33,7 +33,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '4',
+    id: 'masc1',
     name: "Painting Shirt",
     image: "mens-apparel-4.jpeg",
     price: "39.99",
@@ -43,7 +43,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '5',
+    id: 'masc1',
     name: "Celestial Shirt",
     image: "mens-apparel-5.jpeg",
     price: "39.99",
@@ -53,7 +53,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '6',
+    id: 'masc1',
     name: "Continental Cargo Shorts",
     image: "mens-apparel-6.jpeg",
     price: "49.99",
@@ -63,7 +63,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '7',
+    id: 'masc1',
     name: "Embroidered Shorts",
     image: "mens-apparel-7.jpeg",
     price: "39.99",
@@ -73,7 +73,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '8',
+    id: 'masc1',
     name: "Dino Sweater",
     image: "mens-apparel-8.jpeg",
     price: "69.99",
@@ -83,7 +83,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '9',
+    id: 'masc1',
     name: "Linen Pants",
     image: "mens-apparel-9.jpeg",
     price: "29.99",
@@ -93,7 +93,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '10',
+    id: 'masc1',
     name: "Rainbow Sweater",
     image: "mens-apparel-10.jpeg",
     price: "69.99",
@@ -103,7 +103,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '11',
+    id: 'masc1',
     name: "YSL Cologne",
     image: "mens-cologne-1.jpeg",
     price: "129.99",
@@ -113,7 +113,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '12',
+    id: 'masc1',
     name: "Burberry Cologne",
     image: "mens-cologne-2.jpeg",
     price: "179.99",
@@ -123,7 +123,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '13',
+    id: 'masc1',
     name: "Burberry Cologne",
     image: "mens-cologne-3.jpeg",
     price: "129.99",
@@ -133,7 +133,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '14',
+    id: 'masc1',
     name: "Chrome Cologne",
     image: "mens-cologne-4.jpeg",
     price: "99.99",
@@ -143,7 +143,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '15',
+    id: 'masc1',
     name: "Dior Cologne",
     image: "mens-cologne-5.jpeg",
     price: "179.99",
@@ -153,7 +153,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '16',
+    id: 'masc1',
     name: "Golden Sunglasses",
     image: "mens-glasses-1.jpeg",
     price: "129.99",
@@ -163,7 +163,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '17',
+    id: 'masc1',
     name: "3D Sunglasses",
     image: "mens-glasses-2.jpeg",
     price: "189.99",
@@ -173,7 +173,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '18',
+    id: 'masc1',
     name: "Tinted Sunglasses (Brown)",
     image: "mens-glasses-3.jpeg",
     price: "29.99",
@@ -183,7 +183,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '19',
+    id: 'masc1',
     name: "Tinted Sunglasses (Black)",
     image: "mens-glasses-4.jpeg",
     price: "29.99",
@@ -193,7 +193,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '20',
+    id: 'masc1',
     name: "Polarized Sunglasses",
     image: "mens-glasses-5.jpeg",
     price: "89.99",
@@ -203,7 +203,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '21',
+    id: 'masc1',
     name: "Denim Star Shoes",
     image: "mens-shoes-1.jpeg",
     price: "99.99",
@@ -213,7 +213,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '22',
+    id: 'masc1',
     name: "Starry Sneakers",
     image: "mens-shoes-2.jpeg",
     price: "99.99",
@@ -223,7 +223,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '23',
+    id: 'masc1',
     name: "Dragonfly Boots",
     image: "mens-shoes-3.jpeg",
     price: "119.99",
@@ -233,7 +233,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '24',
+    id: 'masc1',
     name: "Lion Boots",
     image: "mens-shoes-4.jpeg",
     price: "119.99",
@@ -243,7 +243,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '25',
+    id: 'masc1',
     name: "Doodle Sneakers",
     image: "mens-shoes-5.jpeg",
     price: "99.99",
@@ -253,7 +253,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '26',
+    id: 'masc1',
     name: "Golden Quartz",
     image: "mens-watches-1.jpeg",
     price: "99.99",
@@ -263,7 +263,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '27',
+    id: 'masc1',
     name: "Emerald Watch",
     image: "mens-watches-2.jpeg",
     price: "149.99",
@@ -273,7 +273,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '28',
+    id: 'masc1',
     name: "Celestial Watch",
     image: "mens-watches-3.jpeg",
     price: "129.99",
@@ -283,7 +283,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '29',
+    id: 'masc1',
     name: "Night Watch",
     image: "mens-watches-4.jpeg",
     price: "169.99",
@@ -293,7 +293,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '30',
+    id: 'masc1',
     name: "Rose Gold Watch",
     image: "mens-watches-5.jpeg",
     price: "169.99",
@@ -303,7 +303,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '31',
+    id: 'masc1',
     name: "Ruffle Top",
     image: "womens-apparel-1.jpeg",
     price: "29.99",
@@ -313,7 +313,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '32',
+    id: 'masc1',
     name: "Floral Lace Top",
     image: "womens-apparel-2.jpeg",
     price: "29.99",
@@ -323,7 +323,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '33',
+    id: 'masc1',
     name: "Laced Bustier",
     image: "womens-apparel-3.jpeg",
     price: "59.99",
@@ -333,7 +333,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '34',
+    id: 'masc1',
     name: "Butterfly Top",
     image: "womens-apparel-4.jpeg",
     price: "59.99",
@@ -343,7 +343,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '35',
+    id: 'masc1',
     name: "Asymmetrical Dress",
     image: "womens-apparel-5.jpeg",
     price: "89.99",
@@ -353,7 +353,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '36',
+    id: 'masc1',
     name: "Love Letters Dress",
     image: "womens-apparel-6.jpeg",
     price: "99.99",
@@ -363,7 +363,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '37',
+    id: 'masc1',
     name: "Fae Skort",
     image: "womens-apparel-7.jpeg",
     price: "49.99",
@@ -373,7 +373,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '38',
+    id: 'masc1',
     name: "Mermaiden Top",
     image: "womens-apparel-8.jpeg",
     price: "29.99",
@@ -383,7 +383,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '39',
+    id: 'masc1',
     name: "Brocade Pants",
     image: "womens-apparel-9.jpeg",
     price: "79.99",
@@ -393,7 +393,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '40',
+    id: 'masc1',
     name: "Beaded Dress",
     image: "womens-apparel-10.jpeg",
     price: "199.99",
@@ -403,7 +403,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '41',
+    id: 'masc1',
     name: "Oval Sunglasses",
     image: "womens-accessories-1.jpeg",
     price: "129.99",
@@ -413,7 +413,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '42',
+    id: 'masc1',
     name: "See No BS",
     image: "womens-accessories-2.jpeg",
     price: "199.99",
@@ -423,7 +423,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '43',
+    id: 'masc1',
     name: "Holographic Gloves",
     image: "womens-accessories-3.jpeg",
     price: "69.99",
@@ -433,7 +433,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '44',
+    id: 'masc1',
     name: "Fluffy Tinted Glasses",
     image: "womens-accessories-4.jpeg",
     price: "29.99",
@@ -443,7 +443,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '45',
+    id: 'masc1',
     name: "My Heart Bag",
     image: "womens-accessories-5.jpeg",
     price: "295.99",
@@ -454,7 +454,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '46',
+    id: 'masc1',
     name: "Fresh Bouquet of Flowers",
     image: "womens-perfume-1.jpeg",
     price: "69.99",
@@ -464,7 +464,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '47',
+    id: 'masc1',
     name: "Diamond of the Garden",
     image: "womens-perfume-2.jpeg",
     price: "119.99",
@@ -474,7 +474,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '48',
+    id: 'masc1',
     name: "Princess Perfume",
     image: "womens-perfume-3.jpeg",
     price: "79.99",
@@ -484,7 +484,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '49',
+    id: 'masc1',
     name: "Starry Perfume",
     image: "womens-perfume-4.jpeg",
     price: "129.99",
@@ -494,7 +494,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '50',
+    id: 'masc1',
     name: "I Like Candy",
     image: "womens-perfume-5.jpeg",
     price: "119.99",
@@ -504,7 +504,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '51',
+    id: 'masc1',
     name: "Dragon Ring",
     image: "womens-jewelry-1.jpeg",
     price: "79.99",
@@ -515,7 +515,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '52',
+    id: 'masc1',
     name: "Birds Ring",
     image: "womens-jewelry-2.jpeg",
     price: "89.99",
@@ -525,7 +525,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '53',
+    id: 'masc1',
     name: "Celestial Earrings",
     image: "womens-jewelry-3.jpeg",
     price: "79.99",
@@ -535,7 +535,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '54',
+    id: 'masc1',
     name: "Gem Bracelet",
     image: "womens-jewelry-4.jpeg",
     price: "109.99",
@@ -545,7 +545,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '55',
+    id: 'masc1',
     name: "Gem Necklace",
     image: "womens-jewelry-5.jpeg",
     price: "199.99",
@@ -555,7 +555,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '56',
+    id: 'masc1',
     name: "Eden Sandal",
     image: "womens-shoes-1.jpeg",
     price: "129.99",
@@ -565,7 +565,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '57',
+    id: 'masc1',
     name: "Fairy Heels",
     image: "womens-shoes-2.jpeg",
     price: "119.99",
@@ -575,7 +575,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '58',
+    id: 'masc1',
     name: "Butterfly Heels",
     image: "womens-shoes-3.jpeg",
     price: "129.99",
@@ -585,7 +585,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '59',
+    id: 'masc1',
     name: "Tulip Boots",
     image: "womens-shoes-4.jpeg",
     price: "199.99",
@@ -595,7 +595,7 @@ const productData = [
     // quantity: ''
   },
   {
-    id: '60',
+    id: 'masc1',
     name: "Bow Boots",
     image: "womens-shoes-5.jpeg",
     price: "199.99",
@@ -606,6 +606,16 @@ const productData = [
   },
 ];
 
-const seedProducts = () => Product.bulkCreate(productData);
+const seedProducts = async () => {
+  try {
+    await Product.sync({ force: true }); // This will drop the table and re-create it
+    await Product.bulkCreate(productData);
+    console.log("Data seeded successfully!");
+  } catch (error) {
+    console.error("Error seeding data:", error);
+  }
+};
+
+seedProducts();
 
 module.exports = seedProducts;

@@ -1,86 +1,65 @@
 const express = require('express');
 const router = express.Router();
 
-// fetch men's sunnies
-
 router.get('/', (req, res) => {
+    // Sample product data with photo URLs
     const products = [
         {
-            image: 'mens-glasses-1.jpeg',
-            name: 'Golden Sunglasses',
-            price: '129.99',
-            description: 'Sunglasses with gold chrome.',
-            colors: 'One Color',
-            sizes: 'One Size',
-            id: '16'
+            image: 'https://plus.unsplash.com/premium_photo-1672239496290-5061cfee7ebb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVucyUyMGdsYXNzZXN8ZW58MHx8MHx8fDA%3D',
+            name: 'Carrera',
+            price: '$199.99',
+            id: 'masc49'
         },
-        {
-            image: 'mens-glasses-2.jpeg',
-            name: '3D Sunglasses',
-            price: '189.99',
-            description: 'Futuristic sunglasses that mimic 3D movie glasses.',
-            colors: 'One Color',
-            sizes: 'One Size',
-            id: '17'
+        { 
+            image: 'https://images.unsplash.com/photo-1512484776495-a09d92e87c3b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1lbnMlMjBnbGFzc2VzfGVufDB8fDB8fHww',
+            name: 'Fendi',
+            price: '$199.99',
+            id: 'masc50'
+    
         },
-        {
-            image: 'mens-glasses-3.jpeg',
-            name: 'Tinted Sunglasses (Brown)',
-            price: '29.99',
-            description: 'Sunglasses with brown frames & colored lenses.',
-            colors: ['Blue', 'Yellow', 'Pink'],
-            sizes: 'One Size',
-            id: '18'
+        { 
+            image: 'https://images.unsplash.com/photo-1517530094915-500495b15ade?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE4fHxtZW5zJTIwZ2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D',
+            name: 'Oakley',
+            price: '$229.99',
+            id: 'masc51'
         },
-        {
-            image: 'mens-glasses-4.jpeg',
-            name: 'Tinted Sunglasses (Black)',
-            price: '29.99',
-            description: 'Sunglasses with black frames & colored lenses.',
-            colors: ['Purple', 'Red', 'Blue'],
-            sizes: 'One Size',
-            id: '19'
+        { 
+            image: 'https://images.unsplash.com/photo-1576110485925-dcb0c92183c0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fG1lbnMlMjBnbGFzc2VzfGVufDB8fDB8fHww',
+            name: 'Ray Ban',
+            price: '$239.99',
+            id: 'masc52'
         },
-        {
-            image: 'mens-glasses-5.jpeg',
-            name: 'Polarized Sunglasses',
-            price: '89.99',
-            description: 'Polarized sunglasses with tinted lenses.',
-            colors: 'One Color',
-            sizes: 'One Size',
-            id: '20'
+        { 
+            image: 'https://images.unsplash.com/photo-1523452617300-93ebbf63ed61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTExfHxtZW5zJTIwZ2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D',
+            name: 'Silhouette',
+            price: '$249.99',
+            id: 'masc53'
         },
-];
-    // Initialize an empty string to store modal HTML
-    let modalsHtml = ''; 
+        { 
+            image: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHxtZW5zJTIwZ2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D',
+            name: 'Costa',
+            price: '$249.99',
+            id: 'masc54'
+        },
+        { 
+            image: 'https://images.unsplash.com/photo-1506634572416-48cdfe530110?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxtZW5zJTIwZ2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D',
+            name: 'Oliver Peoples',
+            price: '$299.99',
+            id: 'masc55'
+        },
+        { 
+            image: 'https://images.unsplash.com/photo-1646251165758-df8462c08202?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjE5fHxtZW5zJTIwZ2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D',
+            name: 'Persol',
+            price: '$299.99',
+            id: 'masc56'
+        }
+    ];
 
-    products.forEach((product) => {
-        // Generate modal HTML for each product
-        const modalHtml = `
-            <div class="modal" id="modal-${product.id}">
-                <img src="${product.image}" alt="${product.description}">
-                <div class="modal-info">
-                    <h2>${product.name}</h2>
-                    <p>Price: ${product.price}</p>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-        `;
-        // Append modal HTML to the modals container
-        modalsHtml += modalHtml; 
-    });
+    // HTML content for the section
+    const sectionContent = '<section class="bg-white py-8">  </section>';
 
-    // HTML content for the section with modals
-    const sectionContent = `
-        <section class="bg-white py-8">
-            <div id="modals-container">
-                ${modalsHtml} <!-- Insert generated modals here -->
-            </div>
-        </section>
-    `;
-
-    // Render the glasses.handlebars template with the product data and section content
-    res.render('glasses', { sectionContent, products });
+    // Render the accessories.handlebars template with the product data and section content
+    res.render('glasses', { sectionContent, products, logged_in: req.session.loggedIn });
 });
 
 module.exports = router;
