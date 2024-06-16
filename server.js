@@ -9,7 +9,7 @@ const sequelize = require("./config/connection");
 const userRoutes = require("./controllers/api/user-routes"); // Path to user-routes.js
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
 
 // Parse incoming request bodies with JSON payloads
 app.use(express.json());
@@ -73,5 +73,5 @@ app.use("/login", loginRoutes);
 app.use(session(sess));
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log("Now listening on port " + PORT));
+  app.listen(port, () => console.log("Now listening on port " + port));
 });
