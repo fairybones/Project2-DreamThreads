@@ -19,3 +19,4 @@ const loginFormHandler = async (event) => {
   }
 };
 
+document.getElementById("loginForm").addEventListener("submit", loginFormHandler)

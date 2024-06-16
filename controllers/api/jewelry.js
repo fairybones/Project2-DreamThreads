@@ -1,86 +1,65 @@
 const express = require('express');
 const router = express.Router();
 
-// fetch women's jewelry
-
 router.get('/', (req, res) => {
+    // Sample product data with photo URLs
     const products = [
         {
-            image: 'womens-jewelry-1.jpeg',
-            name: 'Dragon Ring',
-            price: '79.99',
-            description: 'A bejeweled dragon ring with purple, red, and blue gemstones.',
-            colors: ['Purple', 'Red', 'Blue'],
-            sizes: ['5', '6', '7', '8', '9', '10', '11'],
-            id: '51'
+            image: 'https://images.pexels.com/photos/4993014/pexels-photo-4993014.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'Chopard',
+            price: '$124.99',
+            id: 'masc57'
         },
-        {
-            image: 'womens-jewelry-2.jpeg',
-            name: 'Birds Ring',
-            price: '89.99',
-            description: 'A bejeweled ring with red and pink birds made of gemstones.',
-            colors: ['Gold', 'Silver'],
-            sizes: ['5', '6', '7', '8', '9', '10', '11'],
-            id: '52'
+        { 
+            image: 'https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'Buccellati',
+            price: '$124.99',
+            id: 'masc58'
+    
         },
-        {
-            image: 'womens-jewelry-3.jpeg',
-            name: 'Celestial Earrings',
-            price: '79.99',
-            description: 'Dazzling earrings dripping with stars.',
-            colors: 'One Color',
-            sizes: 'One Size',
-            id: '53'
+        { 
+            image: 'https://images.pexels.com/photos/1721937/pexels-photo-1721937.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'Harry Winston',
+            price: '$129.99',
+            id: 'masc59'
         },
-        {
-            image: 'womens-jewelry-4.jpeg',
-            name: 'Gem Bracelet',
-            price: '109.99',
-            description: 'A chain bracelet with multicolor gemstones.',
-            colors: ['Gold', 'Silver'],
-            sizes: 'Adjustable',
-            id: '54'
+        { 
+            image: 'https://images.pexels.com/photos/1770167/pexels-photo-1770167.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'Monica Vinader',
+            price: '$129.99',
+            id: 'masc60'
         },
-        {
-            image: 'womens-jewelry-5.jpeg',
-            name: 'Gem Necklace',
-            price: '199.99',
-            description: 'A chain featuring multicolor gemstones.',
-            colors: ['Gold', 'Silver'],
-            sizes: 'Adjustable',
-            id: '55'
+        { 
+            image: 'https://images.pexels.com/photos/1637834/pexels-photo-1637834.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'Graff',
+            price: '$134.99',
+            id: 'masc61'
         },
-];
-    // Initialize an empty string to store modal HTML
-    let modalsHtml = ''; 
+        { 
+            image: 'https://images.pexels.com/photos/24740347/pexels-photo-24740347/free-photo-of-portrait-of-woman-with-brown-hair.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'Mejuri',
+            price: '$134.99',
+            id: 'masc62'
+        },
+        { 
+            image: 'https://images.pexels.com/photos/8989580/pexels-photo-8989580.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'Bvlgari',
+            price: '$139.99',
+            id: 'masc63'
+        },
+        { 
+            image: 'https://images.pexels.com/photos/20611671/pexels-photo-20611671/free-photo-of-shiny-and-green-earring.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'David Yurman',
+            price: '$139.99',
+            id: 'masc64'
+        }
+    ];
 
-    products.forEach((product) => {
-        // Generate modal HTML for each product
-        const modalHtml = `
-            <div class="modal" id="modal-${product.id}">
-                <img src="${product.image}" alt="${product.description}">
-                <div class="modal-info">
-                    <h2>${product.name}</h2>
-                    <p>Price: ${product.price}</p>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-        `;
-        // Append modal HTML to the modals container
-        modalsHtml += modalHtml; 
-    });
+    // HTML content for the section
+    const sectionContent = '<section class="bg-white py-8">  </section>';
 
-    // HTML content for the section with modals
-    const sectionContent = `
-        <section class="bg-white py-8">
-            <div id="modals-container">
-                ${modalsHtml} <!-- Insert generated modals here -->
-            </div>
-        </section>
-    `;
-
-    // Render the jewelry.handlebars template with the product data and section content
-    res.render('jewelry', { sectionContent, products });
+    // Render the accessories.handlebars template with the product data and section content
+    res.render('jewelry', { sectionContent, products, logged_in: req.session.loggedIn });
 });
 
 module.exports = router;

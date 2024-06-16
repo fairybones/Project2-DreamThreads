@@ -1,86 +1,65 @@
 const express = require('express');
 const router = express.Router();
 
-// fetch men's shoes
-
 router.get('/', (req, res) => {
+    // Sample product data with photo URLs
     const products = [
         {
-            image: 'mens-watches-1.jpeg',
-            name: 'Golden Quartz',
-            price: '99.99',
-            description: 'A water resistant watch that keeps digital & analog time.',
-            colors: 'One Color',
-            sizes: 'Adjustable',
-            id: '26'
+            image: 'https://images.unsplash.com/photo-1602752975366-5520991f958d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            name: 'BREMONT',
+            price: '$99.99',
+            id: 'masc89'
         },
-        {
-            image: 'mens-watches-2.jpeg',
-            name: 'Emerald Watch',
-            price: '149.99',
-            description: 'A water resistant watch that displays analog time.',
-            colors: 'One Color',
-            sizes: 'Adjustable',
-            id: '27'
+        { 
+            image: 'https://images.unsplash.com/photo-1579171931975-97962e46be2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            name: 'BAUME & MERCIER',
+            price: '$129.99',
+            id: 'masc90'
+    
         },
-        {
-            image: 'mens-watches-3.jpeg',
-            name: 'Celestial Watch',
-            price: '129.99',
-            description: 'A celestial-inspired watch that changes from day to night.',
-            colors: ['Olive Green', 'Brown', 'Black'],
-            sizes: 'Adjustable',
-            id: '28'
+        { 
+            image: 'https://images.unsplash.com/photo-1517463700628-5103184eac47?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdhdGNofGVufDB8fDB8fHww',
+            name: 'JAEGER-LECOULTRE',
+            price: '$149.99',
+            id: 'masc91'
         },
-        {
-            image: 'mens-watches-4.jpeg',
-            name: 'Night Watch',
-            price: '169.99',
-            description: 'A water resistant watch with gold detailing.',
-            colors: 'Black',
-            sizes: 'Adjustable',
-            id: '29'
+        { 
+            image: 'https://images.unsplash.com/photo-1456444029056-7dfaeeb83a19?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            name: 'PATEK PHILIPPE',
+            price: '$199.99',
+            id: 'masc92'
         },
-        {
-            image: 'mens-watches-5.jpeg',
-            name: 'Rose Gold Watch',
-            price: '169.99',
-            description: 'A water resistant watch with rose gold detailing.',
-            colors: 'Black',
-            sizes: 'Adjustable',
-            id: '30'
+        { 
+            image: 'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2F0Y2h8ZW58MHx8MHx8fDA%3D',
+            name: 'Vacheron Constantin',
+            price: '$149.99',
+            id: 'masc93'
         },
-];
-    // Initialize an empty string to store modal HTML
-    let modalsHtml = ''; 
+        { 
+            image: 'https://images.unsplash.com/photo-1472417583565-62e7bdeda490?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fHdhdGNofGVufDB8fDB8fHww',
+            name: 'Omega',
+            price: '$149.99',
+            id: 'masc94'
+        },
+        { 
+            image: 'https://images.unsplash.com/photo-1535346256685-0527f1dfd658?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHdhdGNofGVufDB8fDB8fHww',
+            name: 'IWC Schaffhausen',
+            price: '$159.99',
+            id: 'masc95'
+        },
+        { 
+            image: 'https://images.unsplash.com/photo-1561634370-e284d2c11cf8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTR8fHdhdGNofGVufDB8fDB8fHww',
+            name: 'TAG Heuer',
+            price: '$179.99',
+            id: 'masc96'
+        }
+    ];
 
-    products.forEach((product) => {
-        // Generate modal HTML for each product
-        const modalHtml = `
-            <div class="modal" id="modal-${product.id}">
-                <img src="${product.image}" alt="${product.description}">
-                <div class="modal-info">
-                    <h2>${product.name}</h2>
-                    <p>Price: ${product.price}</p>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-        `;
-        // Append modal HTML to the modals container
-        modalsHtml += modalHtml; 
-    });
+    // HTML content for the section
+    const sectionContent = '<section class="bg-white py-8">  </section>';
 
-    // HTML content for the section with modals
-    const sectionContent = `
-        <section class="bg-white py-8">
-            <div id="modals-container">
-                ${modalsHtml} <!-- Insert generated modals here -->
-            </div>
-        </section>
-    `;
-
-    // Render the watches.handlebars template with the product data and section content
-    res.render('watches', { sectionContent, products });
+    // Render the accessories.handlebars template with the product data and section content
+    res.render('watches', { sectionContent, products, logged_in: req.session.loggedIn });
 });
 
 module.exports = router;

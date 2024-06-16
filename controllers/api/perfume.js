@@ -1,86 +1,65 @@
 const express = require('express');
 const router = express.Router();
 
-// fetch women's perfume
-
 router.get('/', (req, res) => {
+    // Sample product data with photo URLs
     const products = [
         {
-            image: 'womens-perfume-1.jpeg',
-            name: 'Fresh Bouquet of Flowers',
-            price: '69.99',
-            description: 'A sweet scent with floral notes.',
-            colors: 'One Color',
-            sizes: 'One Size',
-            id: '46'
+            image: 'https://images.pexels.com/photos/9944432/pexels-photo-9944432.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'ARMANI',
+            price: '$29.99',
+            id: 'masc73'
         },
-        {
-            image: 'womens-perfume-2.jpeg',
-            name: 'Diamond of the Garden',
-            price: '119.99',
-            description: 'A spicy scent with floral notes.',
-            colors: 'One Color',
-            sizes: 'One Size',
-            id: '47'
+        { 
+            image: 'https://images.pexels.com/photos/4736017/pexels-photo-4736017.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'CALVIN KLEIN',
+            price: '$34.99',
+            id: 'masc74'
+    
         },
-        {
-            image: 'womens-perfume-3.jpeg',
-            name: 'Princess Perfume',
-            price: '79.99',
-            description: 'A lightly floral scent with notes of sandalwood.',
-            colors: 'One Color',
-            sizes: 'One Size',
-            id: '48'
+        { 
+            image: 'https://images.pexels.com/photos/965990/pexels-photo-965990.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'DOLCE & GABBANA',
+            price: '$39.99',
+            id: 'masc75'
         },
-        {
-            image: 'womens-perfume-4.jpeg',
-            name: 'Starry Perfume',
-            price: '129.99',
-            description: 'A dreamy scent with notes of vanilla and lavender.',
-            colors: 'One Color',
-            sizes: 'One Size',
-            id: '49'
+        { 
+            image: 'https://images.pexels.com/photos/1200502/pexels-photo-1200502.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'CHANEL',
+            price: '$44.99',
+            id: 'masc76'
         },
-        {
-            image: 'womens-perfume-5.jpeg',
-            name: 'I Like Candy',
-            price: '119.99',
-            description: 'A sweet, citrusy summer scent.',
-            colors: 'One Color',
-            sizes: 'One Size',
-            id: '50'
+        { 
+            image: 'https://images.pexels.com/photos/4333584/pexels-photo-4333584.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'Jimmy Choo',
+            price: '$49.99',
+            id: 'masc77'
         },
-];
-    // Initialize an empty string to store modal HTML
-    let modalsHtml = ''; 
+        { 
+            image: 'https://images.pexels.com/photos/6729087/pexels-photo-6729087.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'Byredo',
+            price: '$59.99',
+            id: 'masc78'
+        },
+        { 
+            image: 'https://images.pexels.com/photos/20591026/pexels-photo-20591026/free-photo-of-bottle-of-perfumes-and-candles.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'Maison Margiela',
+            price: '$69.99',
+            id: 'masc79'
+        },
+        { 
+            image: 'https://images.pexels.com/photos/8625539/pexels-photo-8625539.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'Guerlain',
+            price: '$79.99',
+            id: 'masc80'
+        }
+    ];
 
-    products.forEach((product) => {
-        // Generate modal HTML for each product
-        const modalHtml = `
-            <div class="modal" id="modal-${product.id}">
-                <img src="${product.image}" alt="${product.description}">
-                <div class="modal-info">
-                    <h2>${product.name}</h2>
-                    <p>Price: ${product.price}</p>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-        `;
-        // Append modal HTML to the modals container
-        modalsHtml += modalHtml; 
-    });
+    // HTML content for the section
+    const sectionContent = '<section class="bg-white py-8">  </section>';
 
-    // HTML content for the section with modals
-    const sectionContent = `
-        <section class="bg-white py-8">
-            <div id="modals-container">
-                ${modalsHtml} <!-- Insert generated modals here -->
-            </div>
-        </section>
-    `;
-
-    // Render the perfume.handlebars template with the product data and section content
-    res.render('perfume', { sectionContent, products });
+    // Render the accessories.handlebars template with the product data and section content
+    res.render('perfume', { sectionContent, products, logged_in: req.session.loggedIn });
 });
 
 module.exports = router;
