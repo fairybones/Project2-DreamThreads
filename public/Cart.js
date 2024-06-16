@@ -25,19 +25,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
   
         if (!response.ok) {
-          console.log('Account not created successfully');
+          console.log('Error with fetch request in cart.js');
           return null;
         } 
   
         // Account created successfully
-        console.log('Account created successfully');
+        console.log('An item was added to the users cart');
         // Display a message to the user
-        alert('Account created successfully! You will now be redirected to the homepage.');
-        // Redirect to the homepage
-        window.location.href = '/homepage';
-  
+        alert('Item added to cart!');
+       
       } catch (error) {
-        console.error('Error creating account:', error);
+        console.error('There was an error', error);
         // Handle any other errors that occur during the fetch request
       }
     });

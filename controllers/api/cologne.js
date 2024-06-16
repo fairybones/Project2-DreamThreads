@@ -5,27 +5,27 @@ router.get('/', (req, res) => {
     // Sample product data with photo URLs
     const products = [
         {
-            image: 'https://images.pexels.com/photos/7691223/pexels-photo-7691223.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 1',
+            image: 'https://t3.ftcdn.net/jpg/04/19/87/42/360_F_419874276_nxcTtIsjxNAFVAj8hBkIIsCAkw8UuOHX.jpg',
+            name: 'DIOR',
             price: '$19.99',
             id: 'masc1'
         },
         { 
-            image: 'https://images.pexels.com/photos/7691223/pexels-photo-7691223.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 2',
-            price: '$24.99',
+            image: 'https://st4.depositphotos.com/36741118/38089/i/450/depositphotos_380890446-stock-photo-mens-perfume-toilet-water-suit.jpg',
+            name: 'CHANEL',
+            price: '$29.99',
             id: 'masc2'
     
         },
         { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 3',
-            price: '$29.99',
+            image: 'https://st2.depositphotos.com/35003014/43315/i/450/depositphotos_433157266-stock-photo-men-perfume-black-leaves-wooden.jpg',
+            name: 'RALPH LAUREN',
+            price: '$34.99',
             id: 'masc3'
         },
         { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 4',
+            image: 'https://thumbs.dreamstime.com/b/bottle-mens-cologne-cufflinks-blue-tie-lie-black-luxury-fabric-background-wooden-table-mens-classic-212712647.jpg',
+            name: 'VERSACE',
             price: '$39.99',
             id: 'masc4'
         },

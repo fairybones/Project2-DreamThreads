@@ -5,28 +5,28 @@ router.get('/', (req, res) => {
     // Sample product data with photo URLs
     const products = [
         {
-            image: 'https://images.pexels.com/photos/7691223/pexels-photo-7691223.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 1',
-            price: '$19.99',
+            image: 'https://images.unsplash.com/photo-1602752975366-5520991f958d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            name: 'BREMONT',
+            price: '$99.99',
             id: 'masc1'
         },
         { 
-            image: 'https://images.pexels.com/photos/7691223/pexels-photo-7691223.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 2',
-            price: '$24.99',
+            image: 'https://images.unsplash.com/photo-1579171931975-97962e46be2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            name: 'BAUME & MERCIER',
+            price: '$129.99',
             id: 'masc2'
     
         },
         { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 3',
-            price: '$29.99',
+            image: 'https://images.unsplash.com/photo-1517463700628-5103184eac47?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdhdGNofGVufDB8fDB8fHww',
+            name: 'JAEGER-LECOULTRE',
+            price: '$149.99',
             id: 'masc3'
         },
         { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 4',
-            price: '$39.99',
+            image: 'https://images.unsplash.com/photo-1456444029056-7dfaeeb83a19?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            name: 'PATEK PHILIPPE',
+            price: '$199.99',
             id: 'masc4'
         },
         { 

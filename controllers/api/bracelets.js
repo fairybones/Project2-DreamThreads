@@ -5,28 +5,28 @@ router.get('/', (req, res) => {
     // Sample product data with photo URLs
     const products = [
         {
-            image: 'https://images.pexels.com/photos/7691223/pexels-photo-7691223.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 1',
-            price: '$19.99',
+            image: 'https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'TIFFANY & CO',
+            price: '$49.99',
             id: 'masc1'
         },
         { 
-            image: 'https://images.pexels.com/photos/7691223/pexels-photo-7691223.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 2',
-            price: '$24.99',
+            image: 'https://images.pexels.com/photos/1306262/pexels-photo-1306262.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'CARTIER',
+            price: '$59.99',
             id: 'masc2'
     
         },
         { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 3',
-            price: '$29.99',
+            image: 'https://images.pexels.com/photos/814662/pexels-photo-814662.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'CELINE',
+            price: '$69.99',
             id: 'masc3'
         },
         { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 4',
-            price: '$39.99',
+            image: 'https://images.pexels.com/photos/37826/nature-hand-natural-people-37826.jpeg?auto=compress&cs=tinysrgb&w=600',
+            name: 'PURE VIDA',
+            price: '$79.99',
             id: 'masc4'
         },
         { 
