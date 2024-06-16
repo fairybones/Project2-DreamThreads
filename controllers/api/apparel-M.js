@@ -7,115 +7,104 @@ router.get('/', (req, res) => {
     // Sample product data with photo URLs
     const products = [
         {
-            product_id: 1,
-            name: 'Swirly Sweater',
             image: 'mens-apparel-1.jpeg',
+            name: 'Swirly Sweater',
             price: '99.99',
             description: 'A comfortable swirly sweater for men.',
             colors: ['Black', 'White'],
             sizes: ['S', 'M', 'L', 'XL'],
-            // quantity: ''
+            id: '1'
         },
         {
-            product_id: 2,
-            name: 'Cactus Shirt',
             image: 'mens-apparel-2.jpeg',
+            name: 'Cactus Shirt',
             price: '39.99',
             description: 'A collared shirt with cactus details.',
             colors: ['Orange', 'Green'],
             sizes: ['S', 'M', 'L', 'XL'],
-            // quantity: ''
+            id: '2'
         },
         {
-            product_id: 3,
-            name: 'Rose Shirt',
             image: 'mens-apparel-3.jpeg',
+            name: 'Rose Shirt',
             price: '39.99',
             description: 'A collared shirt with rose details.',
             colors: ['Mint', 'Green', 'Pink'],
             sizes: ['S', 'M', 'L', 'XL'],
-            // quantity: ''
+            id: '3'
         },
         {
-            product_id: 4,
-            name: 'Painting Shirt',
             image: 'mens-apparel-4.jpeg',
+            name: 'Painting Shirt',
             price: '39.99',
             description: 'A collared shirt that looks like an oil painting.',
             colors: ['Blue', 'Green'],
             sizes: ['S', 'M', 'L', 'XL'],
-            // quantity: ''
+            id: '4'
         },
         {
-            product_id: 5,
-            name: 'Celestial Shirt',
             image: 'mens-apparel-5.jpeg',
+            name: 'Celestial Shirt',
             price: '39.99',
             description: 'A collared shirt with a cat and celestial details.',
             colors: ['Red', 'Blue'],
             sizes: ['S', 'M', 'L', 'XL'],
-            // quantity: ''
+            id: '5'
         },
         {
-            product_id: 6,
-            name: 'Continental Cargo Shorts',
             image: 'mens-apparel-6.jpeg',
+            name: 'Continental Cargo Shorts',
             price: '49.99',
             description: 'Canvas shorts with map details.',
             colors: ['Beige', 'Green'],
             sizes: ['S', 'M', 'L', 'XL'],
-            // quantity: ''
+            id: '6'
         },
         {
-            product_id: 7,
-            name: 'Embroidered Shorts',
             image: 'mens-apparel-7.jpeg',
+            name: 'Embroidered Shorts',
             price: '39.99',
             description: 'Comfortable shorts with embroidered details.',
             colors: ['Cream', 'White'],
             sizes: ['S', 'M', 'L', 'XL'],
-            // quantity: ''
+            id: '7'
         },
         {
-            product_id: 8,
-            name: 'Dino Sweater',
             image: 'mens-apparel-8.jpeg',
+            name: 'Dino Sweater',
             price: '69.99',
             description: 'A patchwork sweater with different prints and dinosaurs.',
             colors: ['Red', 'Blue', 'Green'],
             sizes: ['S', 'M', 'L', 'XL'],
-            // quantity: ''
+            id: '8'
         },
         {
-            product_id: 9,
-            name: 'Linen Pants',
             image: 'mens-apparel-9.jpeg',
+            name: 'Linen Pants',
             price: '29.99',
             description: 'Comfortable, 100% cotton pants for men.',
             colors: ['Beige', 'Cream', 'Oatmeal'],
             sizes: ['S', 'M', 'L', 'XL'],
-            // quantity: ''
+            id: '9'
         },
         {
-            product_id: 10,
-            name: 'Rainbow Sweater',
             image: 'mens-apparel-10.jpeg',
+            name: 'Rainbow Sweater',
             price: '69.99',
             description: 'A thick sweater with rainbow hues.',
             colors: ['Rainbow', 'Pastel Edition'],
             sizes: ['S', 'M', 'L', 'XL'],
-            // quantity: ''
+            id: '10'
         },
 ];
-
-
-    let modalsHtml = ''; // Initialize an empty string to store modal HTML
+    // Initialize an empty string to store modal HTML
+    let modalsHtml = ''; 
 
     products.forEach((product) => {
         // Generate modal HTML for each product
         const modalHtml = `
             <div class="modal" id="modal-${product.id}">
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}" alt="${product.description}">
                 <div class="modal-info">
                     <h2>${product.name}</h2>
                     <p>Price: ${product.price}</p>
@@ -123,8 +112,8 @@ router.get('/', (req, res) => {
                 </div>
             </div>
         `;
-        
-        modalsHtml += modalHtml; // Append modal HTML to the modals container
+        // Append modal HTML to the modals container
+        modalsHtml += modalHtml; 
     });
 
     // HTML content for the section with modals
@@ -136,7 +125,7 @@ router.get('/', (req, res) => {
         </section>
     `;
 
-    // Render the accessories.handlebars template with the product data and section content
+    // Render the apparel-M.handlebars template with the product data and section content
     res.render('apparel-M', { sectionContent, products });
 });
 

@@ -6,65 +6,59 @@ const router = express.Router();
 router.get('/', (req, res) => {
     const products = [
         {
-            product_id: 41,
-            name: 'Oval Sunglasses',
             image: 'womens-accessories-1.jpeg',
+            name: 'Oval Sunglasses',
             price: '129.99',
             description: 'Chunky oval frames in cherry red or classic black.',
             colors: ['Black', 'Red'],
             sizes: 'One Size',
-            // quantity: ''
+            id: '41'
         },
         {
-            product_id: 42,
-            name: 'See No BS',
             image: 'womens-accessories-2.jpeg',
+            name: 'See No BS',
             price: '199.99',
             description: 'Colorful goggles to blind the haters.',
             colors: 'Multicolor',
             sizes: 'Adjustable',
-            // quantity: ''
+            id: '42'
         },
         {
-            product_id: 43,
-            name: 'Holographic Gloves',
             image: 'womens-accessories-3.jpeg',
+            name: 'Holographic Gloves',
             price: '69.99',
             description: 'Rainbow reflective gloves that pack a punch!',
             colors: ['Pink Holo', 'Black Holo'],
             sizes: 'One Size',
-            // quantity: ''
+            id: '43'
         },
         {
-            product_id: 44,
-            name: 'Fluffy Tinted Glasses',
             image: 'womens-accessories-4.jpeg',
+            name: 'Fluffy Tinted Glasses',
             price: '29.99',
             description: 'Super soft frames with colored lenses.',
             colors: ['Pink', 'Blue', 'Purple'],
             sizes: 'One Size',
-            // quantity: ''
+            id: '44'
         },
         {
-            product_id: 45,
-            name: 'My Heart Bag',
             image: 'womens-accessories-5.jpeg',
+            name: 'My Heart Bag',
             price: '295.99',
             description: 'Crystallized anatomical heart bag to hold your favorite things.',
             colors: ['Gold', 'Silver'],
             sizes: 'One Size',
-            // quantity: ''
+            id: '45'
         },
 ];
-
-
-    let modalsHtml = ''; // Initialize an empty string to store modal HTML
+    // Initialize an empty string to store modal HTML
+    let modalsHtml = ''; 
 
     products.forEach((product) => {
         // Generate modal HTML for each product
         const modalHtml = `
             <div class="modal" id="modal-${product.id}">
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}" alt="${product.description}">
                 <div class="modal-info">
                     <h2>${product.name}</h2>
                     <p>Price: ${product.price}</p>
@@ -72,8 +66,8 @@ router.get('/', (req, res) => {
                 </div>
             </div>
         `;
-        
-        modalsHtml += modalHtml; // Append modal HTML to the modals container
+        // Append modal HTML to the modals container
+        modalsHtml += modalHtml; 
     });
 
     // HTML content for the section with modals

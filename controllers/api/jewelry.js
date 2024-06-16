@@ -6,65 +6,59 @@ const router = express.Router();
 router.get('/', (req, res) => {
     const products = [
         {
-            product_id: 51,
-            name: 'Dragon Ring',
             image: 'womens-jewelry-1.jpeg',
+            name: 'Dragon Ring',
             price: '79.99',
             description: 'A bejeweled dragon ring with purple, red, and blue gemstones.',
             colors: ['Purple', 'Red', 'Blue'],
             sizes: ['5', '6', '7', '8', '9', '10', '11'],
-            // quantity: ''
+            id: '51'
         },
         {
-            product_id: 52,
-            name: 'Birds Ring',
             image: 'womens-jewelry-2.jpeg',
+            name: 'Birds Ring',
             price: '89.99',
             description: 'A bejeweled ring with red and pink birds made of gemstones.',
             colors: ['Gold', 'Silver'],
             sizes: ['5', '6', '7', '8', '9', '10', '11'],
-            // quantity: ''
+            id: '52'
         },
         {
-            product_id: 53,
-            name: 'Celestial Earrings',
             image: 'womens-jewelry-3.jpeg',
+            name: 'Celestial Earrings',
             price: '79.99',
             description: 'Dazzling earrings dripping with stars.',
             colors: 'One Color',
             sizes: 'One Size',
-            // quantity: ''
+            id: '53'
         },
         {
-            product_id: 54,
-            name: 'Gem Bracelet',
             image: 'womens-jewelry-4.jpeg',
+            name: 'Gem Bracelet',
             price: '109.99',
             description: 'A chain bracelet with multicolor gemstones.',
             colors: ['Gold', 'Silver'],
             sizes: 'Adjustable',
-            // quantity: ''
+            id: '54'
         },
         {
-            product_id: 55,
-            name: 'Gem Necklace',
             image: 'womens-jewelry-5.jpeg',
+            name: 'Gem Necklace',
             price: '199.99',
             description: 'A chain featuring multicolor gemstones.',
             colors: ['Gold', 'Silver'],
             sizes: 'Adjustable',
-            // quantity: ''
+            id: '55'
         },
 ];
-
-
-    let modalsHtml = ''; // Initialize an empty string to store modal HTML
+    // Initialize an empty string to store modal HTML
+    let modalsHtml = ''; 
 
     products.forEach((product) => {
         // Generate modal HTML for each product
         const modalHtml = `
             <div class="modal" id="modal-${product.id}">
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}" alt="${product.description}">
                 <div class="modal-info">
                     <h2>${product.name}</h2>
                     <p>Price: ${product.price}</p>
@@ -72,8 +66,8 @@ router.get('/', (req, res) => {
                 </div>
             </div>
         `;
-        
-        modalsHtml += modalHtml; // Append modal HTML to the modals container
+        // Append modal HTML to the modals container
+        modalsHtml += modalHtml; 
     });
 
     // HTML content for the section with modals

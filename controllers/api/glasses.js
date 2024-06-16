@@ -6,74 +6,59 @@ const router = express.Router();
 router.get('/', (req, res) => {
     const products = [
         {
-            product_id: 15,
-            name: 'Dior Cologne',
-            image: 'mens-cologne-5.jpeg',
-            price: '179.99',
-            description: 'A calm scent with floral notes.',
-            colors: 'One Color',
-            sizes: ['Travel', 'Small', 'Large'],
-            // quantity: ''
-        },
-        {
-            product_id: 16,
-            name: 'Golden Sunglasses',
             image: 'mens-glasses-1.jpeg',
+            name: 'Golden Sunglasses',
             price: '129.99',
             description: 'Sunglasses with gold chrome.',
             colors: 'One Color',
             sizes: 'One Size',
-            // quantity: ''
+            id: '16'
         },
         {
-            product_id: 17,
-            name: '3D Sunglasses',
             image: 'mens-glasses-2.jpeg',
+            name: '3D Sunglasses',
             price: '189.99',
             description: 'Futuristic sunglasses that mimic 3D movie glasses.',
             colors: 'One Color',
             sizes: 'One Size',
-            // quantity: ''
+            id: '17'
         },
         {
-            product_id: 18,
-            name: 'Tinted Sunglasses (Brown)',
             image: 'mens-glasses-3.jpeg',
+            name: 'Tinted Sunglasses (Brown)',
             price: '29.99',
             description: 'Sunglasses with brown frames & colored lenses.',
             colors: ['Blue', 'Yellow', 'Pink'],
             sizes: 'One Size',
-            // quantity: ''
+            id: '18'
         },
         {
-            product_id: 19,
-            name: 'Tinted Sunglasses (Black)',
             image: 'mens-glasses-4.jpeg',
+            name: 'Tinted Sunglasses (Black)',
             price: '29.99',
             description: 'Sunglasses with black frames & colored lenses.',
             colors: ['Purple', 'Red', 'Blue'],
             sizes: 'One Size',
-            // quantity: ''
+            id: '19'
         },
         {
-            product_id: 20,
-            name: 'Polarized Sunglasses',
             image: 'mens-glasses-5.jpeg',
+            name: 'Polarized Sunglasses',
             price: '89.99',
             description: 'Polarized sunglasses with tinted lenses.',
             colors: 'One Color',
             sizes: 'One Size',
-            // quantity: ''
+            id: '20'
         },
 ];
-
-    let modalsHtml = ''; // Initialize an empty string to store modal HTML
+    // Initialize an empty string to store modal HTML
+    let modalsHtml = ''; 
 
     products.forEach((product) => {
         // Generate modal HTML for each product
         const modalHtml = `
             <div class="modal" id="modal-${product.id}">
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}" alt="${product.description}">
                 <div class="modal-info">
                     <h2>${product.name}</h2>
                     <p>Price: ${product.price}</p>
@@ -81,8 +66,8 @@ router.get('/', (req, res) => {
                 </div>
             </div>
         `;
-        
-        modalsHtml += modalHtml; // Append modal HTML to the modals container
+        // Append modal HTML to the modals container
+        modalsHtml += modalHtml; 
     });
 
     // HTML content for the section with modals

@@ -6,64 +6,59 @@ const router = express.Router();
 router.get('/', (req, res) => {
     const products = [
         {
-            product_id: 26,
-            name: 'Golden Quartz',
             image: 'mens-watches-1.jpeg',
+            name: 'Golden Quartz',
             price: '99.99',
             description: 'A water resistant watch that keeps digital & analog time.',
             colors: 'One Color',
             sizes: 'Adjustable',
-            // quantity: ''
+            id: '26'
         },
         {
-            product_id: 27,
-            name: 'Emerald Watch',
             image: 'mens-watches-2.jpeg',
+            name: 'Emerald Watch',
             price: '149.99',
             description: 'A water resistant watch that displays analog time.',
             colors: 'One Color',
             sizes: 'Adjustable',
-            // quantity: ''
+            id: '27'
         },
         {
-            product_id: 28,
-            name: 'Celestial Watch',
             image: 'mens-watches-3.jpeg',
+            name: 'Celestial Watch',
             price: '129.99',
             description: 'A celestial-inspired watch that changes from day to night.',
             colors: ['Olive Green', 'Brown', 'Black'],
             sizes: 'Adjustable',
-            // quantity: ''
+            id: '28'
         },
         {
-            product_id: 29,
+            image: 'mens-watches-4.jpeg',
             name: 'Night Watch',
-            filename: 'mens-watches-4.jpeg',
             price: '169.99',
             description: 'A water resistant watch with gold detailing.',
             colors: 'Black',
             sizes: 'Adjustable',
-            // quantity: ''
+            id: '29'
         },
         {
-            product_id: 30,
-            name: 'Rose Gold Watch',
             image: 'mens-watches-5.jpeg',
+            name: 'Rose Gold Watch',
             price: '169.99',
             description: 'A water resistant watch with rose gold detailing.',
             colors: 'Black',
             sizes: 'Adjustable',
-            // quantity: ''
+            id: '30'
         },
 ];
-
-    let modalsHtml = ''; // Initialize an empty string to store modal HTML
+    // Initialize an empty string to store modal HTML
+    let modalsHtml = ''; 
 
     products.forEach((product) => {
         // Generate modal HTML for each product
         const modalHtml = `
             <div class="modal" id="modal-${product.id}">
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}" alt="${product.description}">
                 <div class="modal-info">
                     <h2>${product.name}</h2>
                     <p>Price: ${product.price}</p>
@@ -71,8 +66,8 @@ router.get('/', (req, res) => {
                 </div>
             </div>
         `;
-        
-        modalsHtml += modalHtml; // Append modal HTML to the modals container
+        // Append modal HTML to the modals container
+        modalsHtml += modalHtml; 
     });
 
     // HTML content for the section with modals

@@ -6,64 +6,59 @@ const router = express.Router();
 router.get('/', (req, res) => {
     const products = [
         {
-            product_id: 56,
-            name: 'Eden Sandal',
             image: 'womens-shoes-1.jpeg',
+            name: 'Eden Sandal',
             price: '129.99',
             description: 'Kitten heels with bejeweled floral details in womens sizing.',
             colors: 'Multicolor',
             sizes: ['5', '6', '7', '8', '9', '10', '11'],
-            // quantity: ''
+            id: '56'
         },
         {
-            product_id: 57,
-            name: 'Fairy Heels',
             image: 'womens-shoes-2.jpeg',
+            name: 'Fairy Heels',
             price: '119.99',
             description: 'Fanciful heels featuring fairy wings in womens sizing.',
             colors: 'Pink',
             sizes: ['5', '6', '7', '8', '9', '10', '11'],
-            // quantity: ''
+            id: '57'
         },
         {
-            product_id: 58,
-            name: 'Butterfly Heels',
             image: 'womens-shoes-3.jpeg',
+            name: 'Butterfly Heels',
             price: '129.99',
             description: 'Dreamy heels with silk butterflies in womens sizing.',
             colors: 'Multicolor',
             sizes: ['5', '6', '7', '8', '9', '10', '11'],
-            // quantity: ''
+            id: '58'
         },
         {
-            product_id: 59,
-            name: 'Tulip Boots',
             image: 'womens-shoes-4.jpeg',
+            name: 'Tulip Boots',
             price: '199.99',
             description: 'Knee high leather boots with flowers in womens sizing.',
             colors: 'Pink',
             sizes: ['5', '6', '7', '8', '9', '10', '11'],
-            // quantity: ''
+            id: '59'
         },
         {
-            product_id: 60,
-            name: 'Bow Boots',
             image: 'womens-shoes-5.jpeg',
+            name: 'Bow Boots',
             price: '199.99',
             description: 'Knee high leather boots with bows in womens sizing.',
             colors: 'Pink',
             sizes: ['5', '6', '7', '8', '9', '10', '11'],
-            // quantity: ''
+            id: '60'
         },
 ];
-
-    let modalsHtml = ''; // Initialize an empty string to store modal HTML
+    // Initialize an empty string to store modal HTML
+    let modalsHtml = ''; 
 
     products.forEach((product) => {
         // Generate modal HTML for each product
         const modalHtml = `
             <div class="modal" id="modal-${product.id}">
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}" alt="${product.description}">
                 <div class="modal-info">
                     <h2>${product.name}</h2>
                     <p>Price: ${product.price}</p>
@@ -71,8 +66,8 @@ router.get('/', (req, res) => {
                 </div>
             </div>
         `;
-        
-        modalsHtml += modalHtml; // Append modal HTML to the modals container
+        // Append modal HTML to the modals container
+        modalsHtml += modalHtml; 
     });
 
     // HTML content for the section with modals

@@ -6,65 +6,59 @@ const router = express.Router();
 router.get('/', (req, res) => {
     const products = [
         {
-            product_id: 46,
-            name: 'Fresh Bouquet of Flowers',
             image: 'womens-perfume-1.jpeg',
+            name: 'Fresh Bouquet of Flowers',
             price: '69.99',
             description: 'A sweet scent with floral notes.',
             colors: 'One Color',
             sizes: 'One Size',
-            // quantity: ''
+            id: '46'
         },
         {
-            product_id: 47,
-            name: 'Diamond of the Garden',
             image: 'womens-perfume-2.jpeg',
+            name: 'Diamond of the Garden',
             price: '119.99',
             description: 'A spicy scent with floral notes.',
             colors: 'One Color',
             sizes: 'One Size',
-            // quantity: ''
+            id: '47'
         },
         {
-            product_id: 48,
-            name: 'Princess Perfume',
             image: 'womens-perfume-3.jpeg',
+            name: 'Princess Perfume',
             price: '79.99',
             description: 'A lightly floral scent with notes of sandalwood.',
             colors: 'One Color',
             sizes: 'One Size',
-            // quantity: ''
+            id: '48'
         },
         {
-            product_id: 49,
-            name: 'Starry Perfume',
             image: 'womens-perfume-4.jpeg',
+            name: 'Starry Perfume',
             price: '129.99',
             description: 'A dreamy scent with notes of vanilla and lavender.',
             colors: 'One Color',
             sizes: 'One Size',
-            // quantity: ''
+            id: '49'
         },
         {
-            product_id: 50,
-            name: 'I Like Candy',
             image: 'womens-perfume-5.jpeg',
+            name: 'I Like Candy',
             price: '119.99',
             description: 'A sweet, citrusy summer scent.',
             colors: 'One Color',
             sizes: 'One Size',
-            // quantity: ''
+            id: '50'
         },
 ];
-
-
-    let modalsHtml = ''; // Initialize an empty string to store modal HTML
+    // Initialize an empty string to store modal HTML
+    let modalsHtml = ''; 
 
     products.forEach((product) => {
         // Generate modal HTML for each product
         const modalHtml = `
             <div class="modal" id="modal-${product.id}">
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}" alt="${product.description}">
                 <div class="modal-info">
                     <h2>${product.name}</h2>
                     <p>Price: ${product.price}</p>
@@ -72,8 +66,8 @@ router.get('/', (req, res) => {
                 </div>
             </div>
         `;
-        
-        modalsHtml += modalHtml; // Append modal HTML to the modals container
+        // Append modal HTML to the modals container
+        modalsHtml += modalHtml; 
     });
 
     // HTML content for the section with modals
