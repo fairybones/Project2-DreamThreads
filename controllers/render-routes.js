@@ -1,5 +1,5 @@
 const router = require("express").Router();
-
+const {Cart, User} = require("../models/index");
 
 router.get("/", (req, res) => {
     res.render("landing", {
@@ -34,14 +34,16 @@ router.get("/signup", (req, res) => {
     }
 })
 
-router.get("/cart", (req, res) => {
+router.get("/cart", async (req, res) => {
     if(req.session.loggedIn == true) {
+        const cartData = await Cart.findAll({
+            include: [{model: User}]
+        })
+        const carts = cartData.map(cart => cart.get({plain: true}))
         res.render("cart", {
             logged_in: req.session.loggedIn,
             layout: "landing",
-            cart: [
-                
-            ]
+           carts
         })
     } else {
         res.redirect("/login")
