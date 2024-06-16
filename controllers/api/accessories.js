@@ -5,51 +5,51 @@ router.get('/', (req, res) => {
     const products = [
     {
         image: 'https://plus.unsplash.com/premium_photo-1663013641343-7800dfa7eeb1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVucyUyMGJhZ3N8ZW58MHx8MHx8fDA%3D',
-        name: 'Product 1',
-        price: '$19.99',
+        name: 'Mismo',
+        price: '$49.99',
         id: 'masc1'
     },
     { 
         image: 'https://images.unsplash.com/photo-1531938716357-224c16b5ace3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWVucyUyMGJhZ3N8ZW58MHx8MHx8fDA%3D',
-        name: 'Product 2',
-        price: '$24.99',
+        name: 'Carl Friedrik',
+        price: '$49.99',
         id: 'masc2'
 
     },
     { 
         image: 'https://images.unsplash.com/photo-1551830724-90e3ad273bbc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJhZyUyMGZvciUyMG1lbnxlbnwwfHwwfHx8MA%3D%3D',
-        name: 'Product 3',
-        price: '$29.99',
+        name: 'Steele & Borough',
+        price: '$59.99',
         id: 'masc3'
     },
     { 
         image: 'https://images.unsplash.com/photo-1599033769082-95726e3c7900?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJhZyUyMGZvciUyMG1lbnxlbnwwfHwwfHx8MA%3D%3D',
-        name: 'Product 4',
-        price: '$39.99',
+        name: 'Maxwell Scott',
+        price: '$69.99',
         id: 'masc4'
     },
     { 
         image: 'https://images.unsplash.com/flagged/photo-1557581462-0bf3e5907811?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1lbnMlMjBoYXR8ZW58MHx8MHx8fDA%3D',
-        name: 'Product 5',
-        price: '$49.99',
+        name: 'Paul Stuart',
+        price: '$79.99',
         id: 'masc5'
     },
     { 
         image: 'https://images.unsplash.com/photo-1513741125995-599c48b4d213?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fG1lbnMlMjBoYXR8ZW58MHx8MHx8fDA%3D',
-        name: 'Product 6',
-        price: '$59.99',
+        name: 'Brunello Cucinelli',
+        price: '$79.99',
         id: 'masc6'
     },
     { 
         image: 'https://plus.unsplash.com/premium_photo-1661315590779-08802ce7df91?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fG1lbnMlMjBoYXR8ZW58MHx8MHx8fDA%3D',
-        name: 'Product 7',
-        price: '$69.99',
+        name: 'Belfrey Michael',
+        price: '$89.99',
         id: 'masc7'
     },
     { 
         image: 'https://images.unsplash.com/photo-1635350480400-6f920150b1a7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fG1lbnMlMjBoYXR8ZW58MHx8MHx8fDA%3D',
-        name: 'Product 8',
-        price: '$79.99',
+        name: 'Alexander McQueen',
+        price: '$89.99',
         id: 'masc8'
     }
 ];

@@ -6,52 +6,52 @@ router.get('/', (req, res) => {
     const products = [
         {
             image: 'https://plus.unsplash.com/premium_photo-1672239496290-5061cfee7ebb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVucyUyMGdsYXNzZXN8ZW58MHx8MHx8fDA%3D',
-            name: 'Product 1',
-            price: '$19.99',
-            id: 'masc1'
+            name: 'Carrera',
+            price: '$199.99',
+            id: 'masc49'
         },
         { 
             image: 'https://images.unsplash.com/photo-1512484776495-a09d92e87c3b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1lbnMlMjBnbGFzc2VzfGVufDB8fDB8fHww',
-            name: 'Product 2',
-            price: '$24.99',
-            id: 'masc2'
+            name: 'Fendi',
+            price: '$199.99',
+            id: 'masc50'
     
         },
         { 
             image: 'https://images.unsplash.com/photo-1517530094915-500495b15ade?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE4fHxtZW5zJTIwZ2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D',
-            name: 'Product 3',
-            price: '$29.99',
-            id: 'masc3'
+            name: 'Oakley',
+            price: '$229.99',
+            id: 'masc51'
         },
         { 
             image: 'https://images.unsplash.com/photo-1576110485925-dcb0c92183c0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fG1lbnMlMjBnbGFzc2VzfGVufDB8fDB8fHww',
-            name: 'Product 4',
-            price: '$39.99',
-            id: 'masc4'
+            name: 'Ray Ban',
+            price: '$239.99',
+            id: 'masc52'
         },
         { 
             image: 'https://images.unsplash.com/photo-1523452617300-93ebbf63ed61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTExfHxtZW5zJTIwZ2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D',
-            name: 'Product 5',
-            price: '$49.99',
-            id: 'masc5'
+            name: 'Silhouette',
+            price: '$249.99',
+            id: 'masc53'
         },
         { 
             image: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHxtZW5zJTIwZ2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D',
-            name: 'Product 6',
-            price: '$59.99',
-            id: 'masc6'
+            name: 'Costa',
+            price: '$249.99',
+            id: 'masc54'
         },
         { 
             image: 'https://images.unsplash.com/photo-1506634572416-48cdfe530110?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxtZW5zJTIwZ2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D',
-            name: 'Product 7',
-            price: '$69.99',
-            id: 'masc7'
+            name: 'Oliver Peoples',
+            price: '$299.99',
+            id: 'masc55'
         },
         { 
             image: 'https://images.unsplash.com/photo-1646251165758-df8462c08202?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjE5fHxtZW5zJTIwZ2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D',
-            name: 'Product 8',
-            price: '$79.99',
-            id: 'masc8'
+            name: 'Persol',
+            price: '$299.99',
+            id: 'masc56'
         }
     ];
 

@@ -7,51 +7,51 @@ router.get('/', (req, res) => {
         {
             image: 'https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=600',
             name: 'TIFFANY & CO',
-            price: '$49.99',
-            id: 'masc1'
+            price: '$149.99',
+            id: 'masc33'
         },
         { 
             image: 'https://images.pexels.com/photos/1306262/pexels-photo-1306262.jpeg?auto=compress&cs=tinysrgb&w=600',
             name: 'CARTIER',
-            price: '$59.99',
-            id: 'masc2'
+            price: '$159.99',
+            id: 'masc34'
     
         },
         { 
             image: 'https://images.pexels.com/photos/814662/pexels-photo-814662.jpeg?auto=compress&cs=tinysrgb&w=600',
             name: 'CELINE',
-            price: '$69.99',
-            id: 'masc3'
+            price: '$169.99',
+            id: 'masc35'
         },
         { 
             image: 'https://images.pexels.com/photos/37826/nature-hand-natural-people-37826.jpeg?auto=compress&cs=tinysrgb&w=600',
             name: 'PURE VIDA',
-            price: '$79.99',
-            id: 'masc4'
+            price: '$179.99',
+            id: 'masc36'
         },
         { 
             image: 'https://images.pexels.com/photos/20647557/pexels-photo-20647557/free-photo-of-woman-in-white-dress-and-with-necklace-and-bracelets.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 5',
-            price: '$49.99',
-            id: 'masc5'
+            name: 'Verdura',
+            price: '$189.99',
+            id: 'masc37'
         },
         { 
             image: 'https://images.pexels.com/photos/8886980/pexels-photo-8886980.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 6',
-            price: '$59.99',
-            id: 'masc6'
+            name: 'Ippolita',
+            price: '$199.99',
+            id: 'masc38'
         },
         { 
             image: 'https://images.pexels.com/photos/8183950/pexels-photo-8183950.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 7',
-            price: '$69.99',
-            id: 'masc7'
+            name: 'Anita Ko',
+            price: '$199.99',
+            id: 'masc39'
         },
         { 
             image: 'https://images.pexels.com/photos/1324859/pexels-photo-1324859.jpeg?auto=compress&cs=tinysrgb&w=600',
-            name: 'Product 8',
-            price: '$79.99',
-            id: 'masc8'
+            name: 'Jemma Wynne',
+            price: '$2299.99',
+            id: 'masc40'
         }
     ];
 
