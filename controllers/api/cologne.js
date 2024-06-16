@@ -6,65 +6,59 @@ const router = express.Router();
 router.get('/', (req, res) => {
     const products = [
         {
-            product_id: 11,
-            name: 'YSL Cologne',
             image: 'mens-cologne-1.jpeg',
+            name: 'YSL Cologne',
             price: '129.99',
             description: 'A dreamy scent with notes of sandalwood & musk.',
             colors: 'One Color',
             sizes: ['Travel', 'Small', 'Large'],
-            // quantity: ''
+            id: '11'
         },
         {
-            product_id: 12,
-            name: 'Burberry Cologne',
             image: 'mens-cologne-2.jpeg',
+            name: 'Burberry Cologne',
             price: '179.99',
             description: 'A dreamy scent with notes of bamboo & linen.',
             colors: 'One Color',
             sizes: ['Travel', 'Small', 'Large'],
-            // quantity: ''
+            id: '12'
         },
         {
-            product_id: 13,
-            name: 'Burberry Cologne',
             image: 'mens-cologne-3.jpeg',
+            name: 'Bentley Cologne',
             price: '129.99',
             description: 'A strong scent with notes of sandalwood & musk.',
             colors: 'One Color',
             sizes: ['Travel', 'Small', 'Large'],
-            // quantity: ''
+            id: '13'
         },
         {
-            product_id: 14,
-            name: 'Chrome Cologne',
             image: 'mens-cologne-4.jpeg',
+            name: 'Chrome Cologne',
             price: '99.99',
             description: 'A strong scent with notes of bamboo & linen.',
             colors: 'One Color',
             sizes: ['Travel', 'Small', 'Large'],
-            // quantity: ''
+            id: '14'
         },
         {
-            product_id: 15,
-            name: 'Dior Cologne',
             image: 'mens-cologne-5.jpeg',
+            name: 'Dior Cologne',
             price: '179.99',
             description: 'A calm scent with floral notes.',
             colors: 'One Color',
             sizes: ['Travel', 'Small', 'Large'],
-            // quantity: ''
+            id: '15'
         },
 ];
-
-
-    let modalsHtml = ''; // Initialize an empty string to store modal HTML
+    // Initialize an empty string to store modal HTML
+    let modalsHtml = ''; 
 
     products.forEach((product) => {
         // Generate modal HTML for each product
         const modalHtml = `
             <div class="modal" id="modal-${product.id}">
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}" alt="${product.description}">
                 <div class="modal-info">
                     <h2>${product.name}</h2>
                     <p>Price: ${product.price}</p>
@@ -72,8 +66,8 @@ router.get('/', (req, res) => {
                 </div>
             </div>
         `;
-        
-        modalsHtml += modalHtml; // Append modal HTML to the modals container
+        // Append modal HTML to the modals container
+        modalsHtml += modalHtml; 
     });
 
     // HTML content for the section with modals

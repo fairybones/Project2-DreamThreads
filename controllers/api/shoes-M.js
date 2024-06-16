@@ -6,64 +6,59 @@ const router = express.Router();
 router.get('/', (req, res) => {
     const products = [
         {
-            product_id: 21,
-            name: 'Denim Star Shoes',
             image: 'mens-shoes-1.jpeg',
+            name: 'Denim Star Shoes',
             price: '99.99',
             description: 'Sneakers with denim detailing in mens sizing.',
             colors: 'Blue',
             sizes: ['5', '6', '7', '8', '9', '10', '11'],
-            // quantity: ''
+            id: '21'
         },
         {
-            product_id: 22,
-            name: 'Starry Sneakers',
             image: 'mens-shoes-2.jpeg',
+            name: 'Starry Sneakers',
             price: '99.99',
             description: 'Sneakers with suede star detailing in mens sizing.',
             colors: 'Green',
             sizes: ['5', '6', '7', '8', '9', '10', '11'],
-            // quantity: ''
+            id: '22'
         },
         {
-            product_id: 23,
-            name: 'Dragonfly Boots',
             image: 'mens-shoes-3.jpeg',
+            name: 'Dragonfly Boots',
             price: '119.99',
             description: 'Boots with gold detailing in mens sizing.',
             colors: 'Black',
             sizes: ['5', '6', '7', '8', '9', '10', '11'],
-            // quantity: ''
+            id: '23'
         },
         {
-            product_id: 24,
-            name: 'Lion Boots',
             image: 'mens-shoes-4.jpeg',
+            name: 'Lion Boots',
             price: '119.99',
             description: 'Boots with leather detailing in mens sizing.',
             colors: ['Brown', 'Olive Green'],
             sizes: ['5', '6', '7', '8', '9', '10', '11'],
-            // quantity: ''
+            id: '24'
         },
         {
-            product_id: 25,
-            name: 'Doodle Sneakers',
             image: 'mens-shoes-5.jpeg',
+            name: 'Doodle Sneakers',
             price: '99.99',
             description: 'Sneakers with illustrative detailing in mens sizing.',
             colors: ['Green', 'Blue'],
             sizes: ['5', '6', '7', '8', '9', '10', '11'],
-            // quantity: ''
+            id: '25'
         },
 ];
-
-    let modalsHtml = ''; // Initialize an empty string to store modal HTML
+    // Initialize an empty string to store modal HTML
+    let modalsHtml = ''; 
 
     products.forEach((product) => {
         // Generate modal HTML for each product
         const modalHtml = `
             <div class="modal" id="modal-${product.id}">
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}" alt="${product.description}">
                 <div class="modal-info">
                     <h2>${product.name}</h2>
                     <p>Price: ${product.price}</p>
@@ -71,8 +66,8 @@ router.get('/', (req, res) => {
                 </div>
             </div>
         `;
-        
-        modalsHtml += modalHtml; // Append modal HTML to the modals container
+        // Append modal HTML to the modals container
+        modalsHtml += modalHtml; 
     });
 
     // HTML content for the section with modals
