@@ -30,25 +30,25 @@ router.get('/', (req, res) => {
             id: 'masc4'
         },
         { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
+            image: 'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2F0Y2h8ZW58MHx8MHx8fDA%3D',
             name: 'Product 5',
             price: '$49.99',
             id: 'masc5'
         },
         { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
+            image: 'https://images.unsplash.com/photo-1472417583565-62e7bdeda490?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fHdhdGNofGVufDB8fDB8fHww',
             name: 'Product 6',
             price: '$59.99',
             id: 'masc6'
         },
         { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
+            image: 'https://images.unsplash.com/photo-1535346256685-0527f1dfd658?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHdhdGNofGVufDB8fDB8fHww',
             name: 'Product 7',
             price: '$69.99',
             id: 'masc7'
         },
         { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
+            image: 'https://images.unsplash.com/photo-1561634370-e284d2c11cf8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTR8fHdhdGNofGVufDB8fDB8fHww',
             name: 'Product 8',
             price: '$79.99',
             id: 'masc8'

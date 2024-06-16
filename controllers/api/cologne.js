@@ -30,25 +30,25 @@ router.get('/', (req, res) => {
             id: 'masc4'
         },
         { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
+            image: 'https://t3.ftcdn.net/jpg/04/32/90/48/240_F_432904868_69AOOMcZP994jNLIoS1g1OJ0xSdjDtvA.jpg',
             name: 'Product 5',
             price: '$49.99',
             id: 'masc5'
         },
-        { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
+        {
+            image: 'https://images.unsplash.com/photo-1682179329068-c2b92d996033?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1lbnMlMjBjb2xvZ25lfGVufDB8fDB8fHww',
             name: 'Product 6',
             price: '$59.99',
             id: 'masc6'
         },
         { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
+            image: 'https://t3.ftcdn.net/jpg/04/98/75/14/240_F_498751432_tRotSagsRZGBsOM9bu0nn5h4Mv3U4vQ5.jpg',
             name: 'Product 7',
             price: '$69.99',
             id: 'masc7'
         },
         { 
-            image: 'https://images.pexels.com/photos/6163221/pexels-photo-6163221.jpeg?auto=compress&cs=tinysrgb&w=600',
+            image: 'https://t3.ftcdn.net/jpg/05/85/03/16/240_F_585031606_kLxdwvoik8lV2pery3wggYYqonXwYj32.jpg',
             name: 'Product 8',
             price: '$79.99',
             id: 'masc8'
