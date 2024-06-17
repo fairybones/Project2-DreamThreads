@@ -21,7 +21,7 @@ Then initialize server & routes with the command 'node server'
 Navigate to http://localhost:3001 to browse Dream Threads!
 
 ## Usage
-Alternatively our site is deployed with Render at: [url]
+Alternatively our site is deployed with Render at: https://project2-dreamthreads-1.onrender.com/homepage
 This shopping site is designed to give users an enchanting experience while browsing apparel, accessories & more online.
 
 ## Contribution Guidelines
