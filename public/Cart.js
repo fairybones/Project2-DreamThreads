@@ -74,3 +74,76 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const quantityInputs = document.querySelectorAll('.cartQuantityInputs');
+  const itemPrices = document.querySelectorAll('.item-price');
+  const totalCostElement = document.getElementById('totalCost');
+  const totalItemsElement = document.querySelector('.totalProducts');
+
+  function updateTotals() {
+      let totalCost = 0;
+      let totalItems = 0;
+
+      quantityInputs.forEach((input, index) => {
+          let quantity = parseInt(input.value);
+          if (isNaN(quantity) || quantity < 1) {
+              quantity = 1;
+          }
+          input.value = quantity; // Update input value to ensure it's at least 1
+
+          const itemPrice = parseFloat(itemPrices[index].textContent.replace('$', ''));
+          const itemTotalCost = quantity * itemPrice; // Calculate total cost for the item
+          totalCost += itemTotalCost;
+          totalItems += quantity;
+      });
+
+      totalCostElement.textContent = '$' + totalCost.toFixed(2);
+      totalItemsElement.textContent = totalItems + " Items";
+  }
+
+  quantityInputs.forEach(input => {
+      input.addEventListener('input', updateTotals);
+      input.addEventListener('blur', updateTotals); // Trigger updateTotals when input loses focus
+
+      // Allow backspacing on the default quantity
+      input.addEventListener('keydown', function(event) {
+          if (event.key === 'Backspace') {
+              if (input.value.length === 1) {
+                  input.value = ''; // Clear the input value on backspace when only 1 character is present
+              }
+          }
+      });
+
+      // Treat empty input as quantity of 1
+      input.addEventListener('input', function() {
+          if (input.value === '') {
+              input.value = '1';
+          }
+          updateTotals();
+      });
+  });
+
+  const incrementButtons = document.querySelectorAll('.incrementButton');
+  const decrementButtons = document.querySelectorAll('.decrementButton');
+
+  incrementButtons.forEach((button, index) => {
+      button.addEventListener('click', () => {
+          quantityInputs[index].value = parseInt(quantityInputs[index].value) + 1;
+          updateTotals();
+      });
+  });
+
+  decrementButtons.forEach((button, index) => {
+      button.addEventListener('click', () => {
+          let quantity = parseInt(quantityInputs[index].value);
+          if (quantity > 1) {
+              quantityInputs[index].value = quantity - 1;
+              updateTotals();
+          }
+      });
+  });
+
+  // Initial calculation on page load
+  updateTotals();
+});
