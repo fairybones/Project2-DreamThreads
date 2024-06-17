@@ -74,23 +74,25 @@ router.put('/:id', async (req, res) => {
   // update a Cart by its `id` value
 });
 
-router.delete('/', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
-    const cartData = await Cart.destroy({
+    const cartData = await Cart.delete(req.body, {
       where: {
         id: req.params.id,
       },
-      });
-      if (!cartData) {
-        res.status (400).json({ message: "Cart not found."});
-        return;
-      }
-      res.status(200).json(cartData);
-    } catch (error) {
-      console.log(error);
-      res.status(500).json(error);
-    }
-  // delete a Cart by its `id` value
-});
+    });
+  if (!cartData [0]) {
+    res.status(400).json({message: "Category is not found."});
+    return;
+  }
 
+      await cartItem.destroy();
+      res.status(200).json({ message: "Cart item deleted successfully." });
+  } catch (error) {
+      console.error('Error deleting cart item:', error);
+      res.status(500).json(error);
+  }
+});
 module.exports = router;
+
+

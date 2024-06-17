@@ -39,5 +39,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  
+  document.addEventListener("DOMContentLoaded", function() {
+    const itemPrices = document.querySelectorAll('.item-price');
+    let totalCost = 0;
 
+    itemPrices.forEach(item => {
+        const price = parseFloat(item.textContent.replace('$', ''));
+        totalCost += price;
+    });
+
+    const totalCostElement = document.getElementById('totalCost');
+    totalCostElement.innerHTML = '<span>Total cost:</span> <span>$' + totalCost.toFixed(2) + '</span>';
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const cartItems = document.querySelectorAll('.cart-item');
+  const itemsCountElement = document.querySelector('h2.totalProducts');
+
+  itemsCountElement.textContent = cartItems.length + " Items";
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const quantityInput = document.getElementById('cartQuantityInputs');
+
+  quantityInput.addEventListener('keydown', function(event) {
+      if (event.key === 'ArrowUp') {
+          // Increment value on arrow up key press
+          quantityInput.value = parseInt(quantityInput.value) + 1;
+      } else if (event.key === 'ArrowDown') {
+          // Decrement value on arrow down key press
+          if (parseInt(quantityInput.value) > 1) {
+              quantityInput.value = parseInt(quantityInput.value) - 1;
+          }
+      }
+  });
+});
