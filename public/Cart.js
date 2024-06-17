@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
        title: title.textContent, 
        img: img.src,
        price: price.textContent
-       
-        
       };
   
       try {
@@ -40,3 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  
+

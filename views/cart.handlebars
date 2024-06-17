@@ -22,10 +22,9 @@
             </div>
             <div class="flex items-center justify-between pt-5">
               <div class="flex itemms-center">
-                <p class="text-xs leading-3 underline text-gray-800 cursor-pointer">Add to favorites</p>
-                <button class="btn-danger text-xs leading-3 underline text-red-500 pl-5 cursor-pointer">Remove</button>
+                <button id="delete" class="btn-danger text-xs leading-3 underline text-red-500 cursor-pointer">Remove</button>
               </div>
-              <p class="item-price text-base font-black leading-none text-gray-800">{{cart.price}}</p>
+              <p class="item-price text-base leading-none text-gray-800 pr-8">{{cart.price}}</p>
             </div>
           </div>
         </div>
@@ -40,7 +39,7 @@
       </div>
       <div id="summary" class=" w-full   sm:w-1/4   md:w-1/2     px-8 py-10">
         <h1 class="font-semibold text-2xl border-b pb-8">Order Summary</h1>
-        <div>
+        {{!-- <div>
           <label class="font-medium inline-block mb-3 text-sm uppercase">
                 Shipping
               </label>
@@ -49,8 +48,8 @@
              <option>Express shipping - $15.00</option>
               <option>Save on shipping - $5.00</option>
               </select>
-        </div>
-        <div class="border-t mt-8">
+        </div> --}}
+        <div class="mt-8">
           <div id="totalCost" class="flex font-semibold justify-between py-6 text-sm uppercase">
             <span>Total cost</span>
             <span>$25</span>

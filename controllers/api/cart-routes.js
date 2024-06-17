@@ -74,7 +74,7 @@ router.put('/:id', async (req, res) => {
   // update a Cart by its `id` value
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/', async (req, res) => {
   try {
     const cartData = await Cart.destroy({
       where: {
