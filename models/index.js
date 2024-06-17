@@ -1,5 +1,6 @@
 const User = require("./user")
 const Cart = require("./cart")
+
 User.hasMany(Cart, {
     foreignKey: "user_id",
     onDelete: "cascade"
@@ -7,9 +8,6 @@ User.hasMany(Cart, {
 Cart.belongsTo(User, {
     foreignKey: "user_id"
 })
-
-// User.hasMany()
-
 
 module.exports = {
     User,

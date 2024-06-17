@@ -2,11 +2,8 @@ const Cart = require('../../models/cart');
 const User = require('../../models/user');
 
 const router = require('express').Router();
-// const { Cart } = require('../../backend/models/Cart');
 
 // The `/api/Cart` endpoint
-// find all Cart
-// include its associated Products
 router.get('/', async (req, res) => {
   try {
     const cartData = await Cart.findAll({
@@ -18,7 +15,6 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 // find one Cart by its `id` value
 // include its associated Products
@@ -37,8 +33,6 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
 
 router.post('/', async (req, res) => {
   console.log(req.body) 

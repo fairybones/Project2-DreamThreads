@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const {Cart, User} = require("../models/index");
+const { Cart, User } = require("../models/index");
 
 router.get("/", (req, res) => {
     res.render("landing", {
@@ -15,7 +15,7 @@ router.get("/homepage", (req, res) => {
 })
 
 router.get("/login", (req, res) => {
-    if(req.session.loggedIn == true) {
+    if (req.session.loggedIn == true) {
         res.redirect("/homepage")
     } else {
         res.render("login", {
@@ -25,31 +25,29 @@ router.get("/login", (req, res) => {
 })
 
 router.get("/signup", (req, res) => {
-    if(req.session.loggedIn == true) {
+    if (req.session.loggedIn == true) {
         res.redirect("/homepage")
     } else {
-        res.render("signup",  {
+        res.render("signup", {
             layout: "alternate2",
         })
     }
 })
 
 router.get("/cart", async (req, res) => {
-    if(req.session.loggedIn == true) {
+    if (req.session.loggedIn == true) {
         const cartData = await Cart.findAll({
-            include: [{model: User}]
+            include: [{ model: User }]
         })
-        const carts = cartData.map(cart => cart.get({plain: true}))
+        const carts = cartData.map(cart => cart.get({ plain: true }))
         res.render("cart", {
             logged_in: req.session.loggedIn,
             layout: "landing",
-           carts
+            carts
         })
     } else {
         res.redirect("/login")
     }
-   
 })
-
 
 module.exports = router;
