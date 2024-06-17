@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     try {
-      const response = await fetch('http://localhost:3001/api/users/', {
+      const response = await fetch('https://project2-dreamthreads-1.onrender.com/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
