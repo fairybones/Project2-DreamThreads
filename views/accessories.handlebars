@@ -37,17 +37,17 @@
                                     <article class="media">
                                         <div class="media-left">
                                             <figure class="image is-128x128">
-                                                <img src={{image}}>
+                                                <img id="img" src={{image}}>
                                             </figure>
                                         </div>
                                         <div class="media-content">
                                             <div class="content">
-                                                <h1 class="is-underlined">{{name}}</h1>
-                                                <p>{{price}}</p>
+                                                <h1 id="title" class="is-underlined">{{name}}</h1>
+                                                <p id="price"> {{price}}</p>
                                                 <!-- Add additional modal content here -->
                                             </div>
                                             <footer class="modal-card-foot">
-                                                <button class="button is-fullwidth">Add to Cart</button>
+                                                <button id="addToCart" class="addToCart button is-fullwidth">Add to Cart</button>
                                             </footer>
                                         </div>
                                     </article>
