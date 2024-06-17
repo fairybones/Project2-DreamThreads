@@ -1,8 +1,6 @@
 const router = require('express').Router();
-// const { Tag } = require('../../backend/models/tag');
 
 // The `/api/tags` endpoint
-
 router.get('/', async (req, res) => {
   try {
     const tagData = await Tag.findAll({

@@ -2,11 +2,8 @@ const Cart = require('../../models/cart');
 const User = require('../../models/user');
 
 const router = require('express').Router();
-// const { Cart } = require('../../backend/models/Cart');
 
 // The `/api/Cart` endpoint
-// find all Cart
-// include its associated Products
 router.get('/', async (req, res) => {
   try {
     const cartData = await Cart.findAll({
@@ -18,7 +15,6 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 // find one Cart by its `id` value
 // include its associated Products
@@ -37,8 +33,6 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
 
 router.post('/', async (req, res) => {
   console.log(req.body) 
@@ -76,21 +70,24 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const cartData = await Cart.destroy({
+    const cartData = await Cart.destroy( {
       where: {
         id: req.params.id,
+        user_id: req.session.user_id
       },
-      });
-      if (!cartData) {
-        res.status (400).json({ message: "Cart not found."});
-        return;
-      }
-      res.status(200).json(cartData);
-    } catch (error) {
-      console.log(error);
-      res.status(500).json(error);
-    }
-  // delete a Cart by its `id` value
-});
+    });
+    console.log(cartData);
+  if (!cartData) {
+    res.status(400).json({message: "Category is not found."});
+    return;
+  }
 
+      res.status(200).json({ message: "Cart item deleted successfully." });
+  } catch (error) {
+      console.error('Error deleting cart item:', error);
+      res.status(500).json(error);
+  }
+});
 module.exports = router;
+
+

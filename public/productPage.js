@@ -1,3 +1,4 @@
+
 // Function to open the modal with a specific ID
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
