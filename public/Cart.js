@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
           totalItems += quantity;
       });
 
-      totalCostElement.textContent = '$' + totalCost.toFixed(2);
+      totalCostElement.textContent = 'Total: $' + totalCost.toFixed(2);
       totalItemsElement.textContent = totalItems + " Items";
   }
 
