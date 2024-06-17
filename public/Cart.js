@@ -1,16 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('#addToCart');
-    const title = document.querySelector('#title');
-    const img = document.querySelector('#img');
-    const price = document.querySelector('#price');
+    const form = $('.addToCart');
+   
   
-    form.addEventListener('click', async function(event) {
+    form.on('click', async function(event) {
       event.preventDefault();
-  
+      const data = $(event.target).attr("data-item")
+
+      console.log(data)
+
+      const item = JSON.parse(data);
+
+      console.log(item)
+
       const userData = {
-       title: title.textContent, 
-       img: img.src,
-       price: price.textContent
+       title: item.title, 
+       img: item.img,
+       price: item.price
       };
   
       try {

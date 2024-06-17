@@ -70,17 +70,18 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const cartData = await Cart.delete(req.body, {
+    const cartData = await Cart.destroy( {
       where: {
         id: req.params.id,
+        user_id: req.session.user_id
       },
     });
-  if (!cartData [0]) {
+    console.log(cartData);
+  if (!cartData) {
     res.status(400).json({message: "Category is not found."});
     return;
   }
 
-      await cartItem.destroy();
       res.status(200).json({ message: "Cart item deleted successfully." });
   } catch (error) {
       console.error('Error deleting cart item:', error);

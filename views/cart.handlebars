@@ -22,7 +22,7 @@
             </div>
             <div class="flex items-center justify-between pt-5">
               <div class="flex itemms-center">
-                <button  class="delete-button text-xs leading-3 underline text-red-500 cursor-pointer">Remove</button>
+                <button  class="delete-button text-xs leading-3 underline text-red-500 cursor-pointer" data-id="{{cart.id}}">Remove</button>
               </div>
               <p class="item-price text-base leading-none text-gray-800 ">{{cart.price}} Each</p>
             </div>
@@ -51,3 +51,4 @@
       </div>
     </div>
   </div><script src="./Cart.js"></script>
+  </div><script src="./cartDelete.js"></script>
