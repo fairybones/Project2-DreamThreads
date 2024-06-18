@@ -37,6 +37,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   console.log(req.body) 
   const newPrice = req.body.price.replace("$", "")
+  if (req.session.loggedIn)
   try {
     req.body.user_id=req.session.user_id
     req.body.price=parseFloat(newPrice);

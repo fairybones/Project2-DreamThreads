@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = $('.addToCart');
    
-  
     form.on('click', async function(event) {
+      
       event.preventDefault();
+
       const data = $(event.target).attr("data-item")
 
       console.log(data)
